@@ -1,6 +1,6 @@
 Imports System
 
-Public Class Program
+Public Module Program
 	Sub Main(args As String())
 
 		Console.Write("Today is ...")
@@ -11,4 +11,4 @@ Public Class Program
 
 
 	End Sub
-End Class
+End Module
