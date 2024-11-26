@@ -1,7 +1,7 @@
 Imports System
 
 Public Module Program
-	Sub Main(args As String())
+	Public Sub Main(args As String())
 
 		Console.Write("Today is ...")
 		Console.ForegroundColor = ConsoleColor.Yellow
