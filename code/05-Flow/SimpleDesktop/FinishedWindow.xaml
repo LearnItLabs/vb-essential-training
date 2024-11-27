@@ -6,31 +6,34 @@
 				xmlns:local="clr-namespace:SimpleDesktop"
 				mc:Ignorable="d"
 				FontSize='24'
-				Title="FinishedWindow"
+				Title="To Do List Example"
 				Height="450"
-				Width="800">
+				Width="1050">
 	<Grid>
-		<Button x:Name='outputTheDayButton'
-						Content='Output the Day'
+		<Button x:Name='AddToDoButton'
+						Content='Add to list'
 						HorizontalAlignment='Left'
-						Margin='276,90,0,0'
+						Margin='67,254,0,0'
 						VerticalAlignment='Top'
-						Width='207'
+						Width='316'
 						Height='67' />
-		<TextBlock x:Name='textBlock1'
+		<TextBox x:Name='TextBox1'
+						 HorizontalAlignment='Left'
+						 Margin='67,183,0,0'
+						 TextWrapping='Wrap'
+						 Text='Learn VB'
+						 VerticalAlignment='Top'
+						 Width='316' />
+		<ListBox x:Name='ToDoList'
+						 d:ItemsSource='{d:SampleData ItemCount=5}'
+						 Margin='525,0,0,0' />
+		<TextBlock x:Name='TextBlock1'
 							 HorizontalAlignment='Left'
-							 Margin='274,297,0,0'
+							 Margin='67,23,0,0'
 							 TextWrapping='Wrap'
 							 Text='TextBlock'
 							 VerticalAlignment='Top'
-							 Width='209' />
-		<TextBox x:Name='textBox1'
-						 HorizontalAlignment='Left'
-						 Margin='276,183,0,0'
-						 TextWrapping='Wrap'
-						 Text='textBox1'
-						 VerticalAlignment='Top'
-						 Width='207' />
+							 Width='316' />
 
 	</Grid>
 </Window>
