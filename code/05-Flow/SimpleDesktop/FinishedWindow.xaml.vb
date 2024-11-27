@@ -7,7 +7,7 @@ Public Class FinishedWindow
 
 	End Sub
 
-	Private Sub toDoList_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles toDoList.SelectionChanged
+	Private Sub ToDoList_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles ToDoList.SelectionChanged
 		Me.TextBlock1.Text = ToDoList.SelectedItem.ToString
 	End Sub
 End Class
