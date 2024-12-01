@@ -1,0 +1,53 @@
+﻿<Window x:Class="MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:Conversion"
+				mc:Ignorable="d"
+				Title="Code Explorer"
+				Height="450"
+				Width="800"
+				FontSize="20"
+				WindowState='Maximized'>
+	<DockPanel x:Name='MainPanel'
+						 Background="#FFECF7FF"
+						 LastChildFill="True">
+
+		<StackPanel Orientation="Horizontal"
+								DockPanel.Dock="Bottom"
+								HorizontalAlignment="Center">
+			<StackPanel.Resources>
+				<Style TargetType='Button'>
+					<Setter Property='HorizontalAlignment'
+									Value='Center' />
+					<Setter Property='VerticalAlignment'
+									Value='Top' />
+					<Setter Property='Margin'
+									Value='20' />
+					<Setter Property='Padding'
+									Value='6' />
+					<Setter Property='MinWidth'
+									Value='145' />
+				</Style>
+			</StackPanel.Resources>
+			<Button x:Name="PropsButton"
+							Content="Type properties" />
+			<Button x:Name="RunCodeButton"
+							Content="Implicit" />
+			<Button x:Name="RunCode2Button"
+							Content="Explicit" />
+			<Button x:Name="ClearButton"
+							Content="Clear" />
+		</StackPanel>
+		<TextBox x:Name="MessageTextBox"
+						 HorizontalAlignment="Stretch"
+						 Margin="40"
+						 TextWrapping="Wrap"
+						 Text=""
+						 VerticalAlignment="Stretch"
+						 IsReadOnly="True"
+						 DockPanel.Dock="Top"
+						 VerticalScrollBarVisibility='Visible' />
+	</DockPanel>
+</Window>

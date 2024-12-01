@@ -1,0 +1,53 @@
+﻿<Window x:Class="MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:ConstantsApp"
+				mc:Ignorable="d"
+				Title="Code Explorer"
+				Height="450"
+				Width="1100	"
+				FontSize="20">
+	<DockPanel Background="#FFECF7FF"
+						 LastChildFill="True">
+
+		<StackPanel Orientation="Horizontal"
+								DockPanel.Dock="Bottom"
+								HorizontalAlignment="Center">
+			<StackPanel.Resources>
+				<Style TargetType='Button'>
+					<Setter Property='HorizontalAlignment'
+									Value='Center' />
+					<Setter Property='VerticalAlignment'
+									Value='Top' />
+					<Setter Property='Margin'
+									Value='20' />
+					<Setter Property='Padding'
+									Value='6' />
+					<Setter Property='MinWidth'
+									Value='145' />
+				</Style>
+			</StackPanel.Resources>
+			<Button x:Name="RunCodeButton"
+							Content="Custom" />
+			<Button x:Name="RunCode2Button"
+							Content="Built-in Constants" />
+
+			<Button x:Name="EnumButton"
+							Content="Enum" />
+			<Button x:Name="EnumButton2"
+							Content="Enum 2" />
+			<Button x:Name="ClearButton"
+							Content="Clear" />
+		</StackPanel>
+		<TextBox x:Name="MessageTextBox"
+						 HorizontalAlignment="Stretch"
+						 Margin="40"
+						 TextWrapping="Wrap"
+						 Text=""
+						 VerticalAlignment="Stretch"
+						 IsReadOnly="True"
+						 DockPanel.Dock="Top" />
+	</DockPanel>
+</Window>
