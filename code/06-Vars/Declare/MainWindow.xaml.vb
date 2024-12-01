@@ -58,9 +58,10 @@ Class MainWindow
 		'Dim 5counter As Short ' not a valid name
 
 		' Naming conventions:
-		' Suggestions that follows Microsoft internal guidelines
-		' Use camel case for  "local variable" 
-		' (lower case first letter, capitalize rest of words)
+		' Suggestions that follow Microsoft internal guidelines
+		' and are common in .NET libraries.
+		' Use camel case for "local variable" .
+		' (lower case first letter, capitalize rest of words).
 
 		Dim thisIsAGoodName As String = ""
 		Dim lowercasename As String = ""
