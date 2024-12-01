@@ -1,6 +1,4 @@
-﻿Imports System.Diagnostics.Metrics
-Imports System.Reflection
-Imports System.Runtime.CompilerServices
+﻿
 
 Class MainWindow
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
