@@ -37,16 +37,18 @@ Class MainWindow
 		' R or r: Double
 		' D or d: Decimal
 		Dim boxCounter = 20
-		Dim appCounter = 20I
+		Dim appCounter = 20.5D
 
 	End Sub
 
 	Private Sub ValidIdButton_Click(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
 		' Variable name rules
-		' It must begin with an alphabetic character or an underscore (_).
-		' It must only contain alphabetic characters, decimal digits, and underscores.
-		' It must contain at least one alphabetic character Or decimal digit if it begins with an underscore.
-		'	It must not be more than 1023 characters long.
+
+		' - It must begin with an alphabetic character or an underscore (_).
+		' - It must only contain alphabetic characters, decimal digits, and underscores.
+		' - It must contain at least one alphabetic characterr decimal
+		'    digit if it begins with an underscore.
+		'	- It must not be more than 1023 characters long.
 
 		Dim _counter As Integer
 		Dim counter As Long
@@ -55,8 +57,9 @@ Class MainWindow
 
 		'Dim 5counter As Short ' not a valid name
 
-
-		' suggested naming convention for "local variable" is camel case 
+		' Naming conventions:
+		' Suggestions that follows Microsoft internal guidelines
+		' Use camel case for  "local variable" 
 		' (lower case first letter, capitalize rest of words)
 
 		Dim thisIsAGoodName As String = ""
