@@ -1,39 +1,56 @@
 ﻿Class MainWindow
-	' class level scope, variable is visible to all code in class
-	' in OOP this is also considered a Field (a member of the class type)
+	' Class-level scope:
+	' - The variable is visible to all code within the class.
+	' - In Object-Oriented Programming (OOP), such variables are referred to as fields.
+	' - Fields are members of the class type and can be accessed by all methods within the class.
+
 
 	Private primaryBrush As New SolidColorBrush
 
-	' underscore naming convention preferred by some OOP programmers
+	' underscore naming convention
+	' preferred by some OOP programmers
 	Private _accentBrush As New SolidColorBrush
 
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
-		' variable have scope and lifetime
+		' Variables have both scope and lifetime.
 
-		' scope determines its visibility to other code
-		' variables in the same scope cannot have the same name
+		' Scope:
+		' - Scope determines the visibility of a variable to other parts of the code.
+		' - Variables within the same scope cannot share the same name.
 
-		' lifetime is how long the memory location is kept available
+		' Lifetime:
+		' - Lifetime refers to the duration for which the variable's allocated memory remains available.
+		' - The lifetime of a variable depends on where it is declared.
 
-		Dim counter As Integer = 15
+
+		Dim cartCounter As Integer = 15
 		'Dim counter As Long = 20
 
-		' counter is local variable, any code in this method can access 
 
-		If counter > 10 Then
-			counter += 1
+
+		' The variable 'cartCounter' is a local variable.
+		' - Local variables are only accessible within the method where they are declared.
+		' - Any code within this method can access and modify 'cartCounter'.
+
+
+		If cartCounter > 10 Then
+			cartCounter += 1
 			Dim message As String = "block scope"
-			' message is block scope, only visible in this if block
+			' 'message' is a block-scoped variable. 
+			' - It is declared within this 'if' statement. 
+			' - 'message' is only accessible inside this statment. 
+			' - Any code outside this statement cannot access 'message'.
 			ShowIt(message)
 
 		End If
-		If counter > 20 Then
+		If cartCounter > 20 Then
 			Dim message As String = "block scope"
-			' message is block scope, only visible in this if block
+			' we can declare the same variable name, as it doesn't confict 
+			' with block-scope variables declared elsewhere.
 			ShowIt(message)
 		End If
-		' what about this variable?
+		' What is the scope, can we use this variable here?
 		'	message = "Cannot access this variable"
 
 	End Sub
