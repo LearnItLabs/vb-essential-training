@@ -7,8 +7,9 @@
 				mc:Ignorable="d"
 				Title="Code Explorer"
 				Height="450"
-				Width="850	"
-				FontSize="20">
+				Width="1050"
+				FontSize="15"
+				Topmost='True'>
 	<DockPanel x:Name='MainPanel'
 						 Background="LightSteelBlue"
 						 LastChildFill="True">
@@ -23,7 +24,7 @@
 					<Setter Property='VerticalAlignment'
 									Value='Top' />
 					<Setter Property='Margin'
-									Value='20' />
+									Value='15	' />
 					<Setter Property='Padding'
 									Value='6' />
 					<Setter Property='MinWidth'
@@ -31,14 +32,13 @@
 				</Style>
 			</StackPanel.Resources>
 			<Button x:Name="RunCodeButton"
-							Content="Go!"
-							 />
-			<Button x:Name="RunCode2Button"
-							Content="Identifiers"
-						 />
+							Content="Go!" />
+			<Button x:Name="SuffixButton"
+							Content="Literal Suffix" />
 			<Button x:Name="RunCode3Button"
-							Content="Change Color"
-						/>
+							Content="Change Color" />
+			<Button x:Name="RunCode2Button"
+							Content="Names" />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							HorizontalAlignment="Center"

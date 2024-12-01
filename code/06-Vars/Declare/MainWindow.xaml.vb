@@ -1,32 +1,46 @@
-﻿Imports System.Runtime.CompilerServices
+﻿Imports System.Diagnostics.Metrics
+Imports System.Reflection
+Imports System.Runtime.CompilerServices
 
 Class MainWindow
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
 		' Declare with identifier, type and initializer 
-		Dim counter As Integer = 22
+		Dim cartCount As Integer = 22
 		Dim taxRate As Double = 9.75
 
 		' Declare with identifier and initializer
-		Dim counter2 = 33
+		' Variable type is inferred from the literal type
+		Dim boxCount = 33
 		Dim isFileReadOnly = False
 
-		'  Declare with identifier
-		Dim counter3
+		' Declare with identifier only
+		Dim productCount
 		' assign a value before using
-		counter3 = 44
+		productCount = 44
 
-		' declare variable of any .NET type that has a constructor
-		'  use the New keyword
-		Dim simpleBrush As SolidColorBrush = New SolidColorBrush
-		Dim backBrush = New SolidColorBrush() ' see color button for example
 
 #Region "Output"
-		ShowIt(counter, NameOf(counter), counter.GetType().Name)
-		ShowIt(taxRate, NameOf(taxRate), taxRate.GetType().Name)
-		ShowIt(counter2, NameOf(counter2), counter2.GetType().Name)
-		ShowIt(isFileReadOnly, NameOf(isFileReadOnly), isFileReadOnly.GetType().Name)
-		ShowIt(counter3, NameOf(counter3), counter3.GetType().Name)
+		ShowItDetailed(cartCount, NameOf(cartCount), cartCount.GetType().Name)
+
+		ShowItDetailed(taxRate, NameOf(taxRate), taxRate.GetType().Name)
+		ShowItDetailed(boxCount, NameOf(boxCount), boxCount.GetType().Name)
+		ShowItDetailed(isFileReadOnly, NameOf(isFileReadOnly), isFileReadOnly.GetType().Name)
+		ShowItDetailed(productCount, NameOf(productCount), productCount.GetType().Name)
 #End Region
+	End Sub
+	Private Sub SuffixButton_Click(sender As Object, e As RoutedEventArgs) Handles SuffixButton.Click
+		'  In Visual Basic (VB), there are several literal type character suffixes
+		'  you can use to specify the data type of a literal constant.
+		' I or i: Integer
+		' L or l: Long
+		' S or s: Short
+
+		' F or f: Single (float)
+		' R or r: Double
+		' D or d: Decimal
+		Dim boxCounter = 20
+		Dim appCounter = 20I
+
 	End Sub
 
 	Private Sub ValidIdButton_Click(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
@@ -73,14 +87,29 @@ Class MainWindow
 
 
 	Private Sub ChangeColorButton_Click(sender As Object, e As RoutedEventArgs) Handles RunCode3Button.Click
+
+		' We can declare a variable of any .NET type.
+		' We can instantiate the type (with the New keyword) if it has a contructor
+		' We can instantiate the type if it has a factory method
+
+		Dim simpleBrush As SolidColorBrush = New SolidColorBrush
+		Dim products As List = New List
+
+		' Provides a set of properties and methods that are used to manage cookies
+		Dim siteCookie As Net.Cookie = New Net.Cookie
+
+
+
 		Dim backBrush As New SolidColorBrush
 		backBrush.Color = Colors.Orange
 		MainPanel.Background = backBrush
 	End Sub
-	Sub ShowIt(message As String, variableName As String, typeName As String)
-		Dim paddedMessage = $"variable name: {variableName} is of type {typeName}.  Value = {message}"
-		MessageTextBox.Text += paddedMessage + vbCrLf
+	Sub ShowItDetailed(message As String, variableName As String, typeName As String)
+
+		Dim paddedMessage = $"{variableName}: is of type ({typeName}). {vbCrLf}  Value = {message}"
+		MessageTextBox.Text += paddedMessage + vbCrLf + vbCrLf
 	End Sub
+
 	Sub ShowIt(message As String)
 		MessageTextBox.Text += message + vbCrLf
 	End Sub
