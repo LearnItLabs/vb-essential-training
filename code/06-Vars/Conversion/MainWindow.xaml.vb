@@ -4,32 +4,24 @@ Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
 		Dim myInteger As Integer = Integer.MaxValue
-		Dim myLong As Long = Long.MaxValue
-
-		'Dim targetInteger As Integer
-		'Dim targetLong As Long
+		Dim myShort As Short = Short.MaxValue
 
 
+		Dim targetShort As Short
 
+		targetShort = NumberSlider.Value
+		ShowIt(targetShort)
 	End Sub
 
 	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
 		Dim myInteger As Integer = Integer.MaxValue
+		Dim myShort As Short = Short.MaxValue
 
-		Dim myLong As Long = Long.MaxValue
+		Dim targetShort As Short
 
-		Dim targetInteger As Integer
-		Dim targetLong As Long
+		targetShort = Convert.ToInt16(NumberSlider.Value)
 
-		' add explicit conversion to long
-
-
-		ShowIt(targetLong)
-
-		' add explicit conversion to integer
-
-
-		ShowIt(targetInteger)
+		ShowIt(targetShort.ToString)
 
 	End Sub
 

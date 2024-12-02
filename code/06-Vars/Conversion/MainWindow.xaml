@@ -5,7 +5,7 @@
 				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 				xmlns:local="clr-namespace:Conversion"
 				mc:Ignorable="d"
-				Topmost='True'
+				
 				Title="Code Explorer"
 				Height="450"
 				Width="800"
@@ -13,8 +13,26 @@
 				WindowState='Maximized'>
 	<DockPanel x:Name='MainPanel'
 						 Background="#FFECF7FF"
-						 LastChildFill="True">
+						 LastChildFill="True"
+						 Margin='0,0,0,20'>
+		<StackPanel DockPanel.Dock='Bottom'
+						
+								Margin='40,10'>
+			<TextBlock x:Name='NumberTextBlock'
+								 Text='{Binding Value, ElementName=NumberSlider}'
+								 HorizontalAlignment='Center' />
 
+			<Slider Minimum='1'
+							Maximum='300000'
+							IsSnapToTickEnabled='True'
+							DockPanel.Dock='Bottom'
+							Name='NumberSlider'
+							SmallChange='10'
+						
+							TickFrequency='10'
+							LargeChange='50'
+							AutoToolTipPlacement='TopLeft' />
+		</StackPanel>
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
