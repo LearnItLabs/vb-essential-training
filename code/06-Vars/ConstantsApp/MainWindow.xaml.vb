@@ -50,18 +50,25 @@ Class MainWindow
 	End Sub
 
 	Private Sub EnumButton_Click(sender As Object, e As RoutedEventArgs) Handles EnumButton.Click
-		Dim today As Integer
-		today = WorkWithEnums.Tuesday
-		today = 154 ' not an expected value
+		Dim currentDay As DayOfWeek 'Represents the days of the week.
+		currentDay = DayOfWeek.
+
+		' Specifies constants that define foreground and background colors for the console.
+		Dim color As ConsoleColor
+		color = ConsoleColor.Yellow
+
+		' Get directory paths to system special folders.
+		Dim currentFolder As Environment.SpecialFolder
+		currentFolder = Environment.SpecialFolder.Favorites
 
 	End Sub
 
 	Private Sub EnumButton2_Click(sender As Object, e As RoutedEventArgs) Handles EnumButton2.Click
-		Dim today As DayOfWeek
-		today = DayOfWeek.Thursday
-		today = 154 ' not an expected value
+		Dim currentSeason As Integer
+		currentSeason = WorkWithEnums.Seasons.Spring
 
-		Dim saleDay As WorkWithEnums.TheDays
-		saleDay = TheDays.Friday
+		If currentSeason = Seasons.Summer Then
+			ShowIt("Forecast of warm sunny days...")
+		End If
 	End Sub
 End Class
