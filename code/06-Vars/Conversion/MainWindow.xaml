@@ -23,7 +23,7 @@
 								 HorizontalAlignment='Center' />
 
 			<Slider Minimum='1'
-							Maximum='300000'
+							Maximum='50000'
 							IsSnapToTickEnabled='True'
 							DockPanel.Dock='Bottom'
 							Name='NumberSlider'
