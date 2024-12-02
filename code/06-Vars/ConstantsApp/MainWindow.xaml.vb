@@ -1,17 +1,15 @@
 ﻿Option Strict Off
 Class MainWindow
+	Public Const DocFileExtension As String = ".paper"
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
 		' constants are usually declared at the module or class level
 
-		Const Pi As Decimal = 3.1415926535897931
-		Const HALF_BYTE As Byte = 127
-
-		Dim circumference As Double
-		Dim diameter As Double = 4
-		circumference = Pi * diameter
-		ShowIt(circumference)
-		ShowIt(HALF_BYTE)
+		Const StandardCommisionRate As Decimal = 4.5D
+		Const EPIC_COMMISION_RATE As Byte = 7.75D
+		ShowIt(DocFileExtension)
+		ShowIt(StandardCommisionRate)
+		ShowIt(EPIC_COMMISION_RATE)
 	End Sub
 
 	Private Sub BuiltInButton_Click(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
@@ -33,7 +31,7 @@ Class MainWindow
 			' can still be useful for consistency and simplicity.
 		End If
 
-		If result = Constants.vbCancel Then
+		If result = Constants.vbOK Then
 			' If maintaining legacy VB code, using the VB constants
 			' can still be useful for consistency and simplicity.
 		End If
