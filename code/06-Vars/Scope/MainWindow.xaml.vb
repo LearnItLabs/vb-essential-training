@@ -20,7 +20,8 @@
 		' - Variables within the same scope cannot share the same name.
 
 		' Lifetime:
-		' - Lifetime refers to the duration for which the variable's allocated memory remains available.
+		' - Lifetime refers to the duration for which
+		'   the variable's allocated memory remains available.
 		' - The lifetime of a variable depends on where it is declared.
 
 
