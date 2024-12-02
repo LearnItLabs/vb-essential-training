@@ -49,7 +49,7 @@ Class MainWindow
 
 	Private Sub EnumButton_Click(sender As Object, e As RoutedEventArgs) Handles EnumButton.Click
 		Dim currentDay As DayOfWeek 'Represents the days of the week.
-		currentDay = DayOfWeek.
+		currentDay = DayOfWeek.Sunday
 
 		' Specifies constants that define foreground and background colors for the console.
 		Dim color As ConsoleColor
