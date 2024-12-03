@@ -37,8 +37,6 @@ Class MainWindow
 		End If
 
 	End Sub
-
-
 	Sub ShowIt(message As String)
 		MessageTextBox.Text += message + vbCrLf
 	End Sub
@@ -50,6 +48,7 @@ Class MainWindow
 	Private Sub EnumButton_Click(sender As Object, e As RoutedEventArgs) Handles EnumButton.Click
 		Dim currentDay As DayOfWeek 'Represents the days of the week.
 		currentDay = DayOfWeek.Sunday
+		' currentDay = 24 ' this should not be allowed!
 
 		' Specifies constants that define foreground and background colors for the console.
 		Dim color As ConsoleColor
@@ -62,8 +61,8 @@ Class MainWindow
 	End Sub
 
 	Private Sub EnumButton2_Click(sender As Object, e As RoutedEventArgs) Handles EnumButton2.Click
-		Dim currentSeason As Integer
-		currentSeason = WorkWithEnums.Seasons.Spring
+		Dim currentSeason As Seasons
+		currentSeason = Seasons.Spring
 
 		If currentSeason = Seasons.Summer Then
 			ShowIt("Forecast of warm sunny days...")
