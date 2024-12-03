@@ -67,7 +67,10 @@ Partial Class MainWindow
 
 		Dim periodExists = message.EndsWith(".")
 		Dim wordExists = message.StartsWith("Hello")
-
+		ShowHeader("EndsWith, StartsWith")
+		ShowIt($"Period exists: {periodExists}")
+		ShowIt($"Starts with word: {wordExists}")
+		ShowLine()
 		' finding by index
 		' return -1 if not found, otherwise the index location
 		Dim searchWord = SearchWordTextbox.Text
