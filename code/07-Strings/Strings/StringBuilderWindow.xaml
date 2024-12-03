@@ -1,10 +1,10 @@
 ﻿<Window x:Class="StringBuilderWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Strings"
-				Topmost='True'
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:Strings"
+				DataContext='Me'
 				Title="Code Explorer"
 				Height="650"
 				Width="1000"
@@ -30,66 +30,67 @@
 
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
-								HorizontalAlignment="Center">
-			<Button x:Name="ButtonE"
-							Content="Modify" />
-			<Button x:Name="ButtonF"
-							Content="Split/Join" />
-			<Button x:Name="ClearButton"
-							Content="Clear" />
-		</StackPanel>
+								HorizontalAlignment="Center" />
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Create String" />
+							Content="StringBuilder" />
 			<Button x:Name="ButtonB"
-							Content="String Builder" />
-			<!--<Button x:Name="ButtonC"
-							Content="Join" />-->
+							Content="Concat (speed)" />
+		
 			<Button x:Name="ButtonD"
-							Content="Search" />
+							Content="StringBuilder (speed)" />
+			<Button x:Name="ClearButton"
+							Content="Clear" />
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"
 								HorizontalAlignment='Stretch'
 								Margin="40,5">
-			<TextBlock Text='Enter Team A name:' />
-			<TextBox x:Name="TeamATextBox"
+			<TextBlock Text='Concat Time:' />
+			<TextBox x:Name="ConcatTextBox"
 							 HorizontalAlignment="Stretch"
 							 MinWidth='200'
 							 Margin='10,0'
-							 Text="Silver Sluggers"
 							 VerticalAlignment="Stretch" />
-			<TextBlock Text='Enter Team B name:' />
-			<TextBox x:Name="TeamBTextBox"
+			<TextBlock Text='StringBuilder Time:' />
+			<TextBox x:Name="BuilderTextbox"
 							 HorizontalAlignment="Stretch"
 							 MinWidth='200'
 							 Margin='10,0'
-							 Text="Purple Aces"
+							 Text=""
 							 VerticalAlignment="Stretch" />
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"
 								HorizontalAlignment='Stretch'
-								Margin="40,5">
-			<TextBlock Text='Search for word' />
-			<TextBox x:Name="SearchWordTextbox"
-							 HorizontalAlignment="Stretch"
-							 MinWidth='200'
-							 Margin='10,0'
-							 Text="skills"
-							 VerticalAlignment="Stretch" />
+								Margin="40,5" />
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<ScrollViewer VerticalScrollBarVisibility="Auto">
+				
+			
+			<TextBlock x:Name="MessageOut"
+								 HorizontalAlignment="Stretch"
+								 Margin="40,10"
+								 TextWrapping="Wrap"
+								 Text=""
+								 Background='White'
+								 VerticalAlignment="Stretch" />
+			</ScrollViewer>
+			<TextBlock x:Name="OtherMessageOut"
+								 Grid.Column='1'
+								 HorizontalAlignment="Stretch"
+								 Margin="40,10"
+								 TextWrapping="Wrap"
+								 Text=""
+								 Background='White'
+								 VerticalAlignment="Stretch" />
+		</Grid>
 
-		</StackPanel>
-		<TextBox x:Name="MessageTextBox"
-						 HorizontalAlignment="Stretch"
-						 Margin="40,10"
-						 TextWrapping="Wrap"
-						 Text=""
-						 VerticalAlignment="Stretch"
-						 IsReadOnly="True"
-						 DockPanel.Dock="Top"
-						 VerticalScrollBarVisibility='Visible' />
 	</DockPanel>
 </Window>
