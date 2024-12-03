@@ -71,11 +71,13 @@ Partial Class MainWindow
 		ShowIt($"Period exists: {periodExists}")
 		ShowIt($"Starts with word: {wordExists}")
 		ShowLine()
+
 		' finding by index
 		' return -1 if not found, otherwise the index location
 		Dim searchWord = SearchWordTextbox.Text
 		ShowHeader("Use Contains method")
 		ShowIt($"'{searchWord}' Exists: {message.Contains(searchWord)}")
+
 		Dim wordIndex As Integer = message.IndexOf(searchWord)
 		ShowHeader("Use IndexOf method")
 		ShowIt($"Word Index for '{searchWord}': {wordIndex}")
