@@ -80,6 +80,10 @@ Partial Class MainWindow
 		ShowHeader("Use IndexOf method")
 		ShowIt($"Word Index for '{searchWord}': {wordIndex}")
 
+		' get a substring
+		Dim subString = message.Substring(startIndex:=5, length:=20)
+		ShowHeader("SubString")
+		ShowIt(subString)
 
 	End Sub
 	Private Sub Modify_Click(sender As Object, e As RoutedEventArgs) Handles ButtonE.Click
