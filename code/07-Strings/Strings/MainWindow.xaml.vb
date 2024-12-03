@@ -79,9 +79,10 @@ Partial Class MainWindow
 
 	End Sub
 	Private Sub Modify_Click(sender As Object, e As RoutedEventArgs) Handles ButtonE.Click
-
+		' strings are immutable
 		Dim lettersWithSpaces = "  AA  "
 		Dim trimmed = lettersWithSpaces.Trim(" ")
+		lettersWithSpaces = "  XYZ " 'Creates a new string with the desired changes.
 
 		'  trim these chars
 		Dim charsToTrim = New Char() {","c, "."c, " "c, "!"c}
@@ -105,6 +106,8 @@ Partial Class MainWindow
 		ShowHeader("Replace")
 		ShowIt(message)
 		ShowIt(replaced)
+
+
 
 	End Sub
 
