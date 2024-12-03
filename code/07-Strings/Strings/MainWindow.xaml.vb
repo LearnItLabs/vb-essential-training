@@ -16,6 +16,7 @@ Partial Class MainWindow
 
 		Dim firstChar = direction(0)
 		ShowIt(firstChar)
+		ShowLine()
 
 		' use the constructor to build a string
 		Dim line = New String("☼"c, 23)
@@ -23,7 +24,7 @@ Partial Class MainWindow
 		ShowIt(direction)
 		ShowIt(message)
 		ShowIt(line)
-
+		ShowLine()
 		' To include double quotes within a string by doubling them up.
 
 		Dim famousQuote = "Grabbing a paintbrush, she said, ""Imagination is more important than knowledge."" and quickly painted the small canvas."
