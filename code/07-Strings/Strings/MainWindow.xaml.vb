@@ -71,11 +71,15 @@ Partial Class MainWindow
 		ShowIt($"Period exists: {periodExists}")
 		ShowIt($"Starts with word: {wordExists}")
 		ShowLine()
-		' finding by index
-		' return -1 if not found, otherwise the index location
+
+
 		Dim searchWord = SearchWordTextbox.Text
 		ShowHeader("Use Contains method")
 		ShowIt($"'{searchWord}' Exists: {message.Contains(searchWord)}")
+
+
+		' finding by index
+		' return -1 if not found, otherwise the index location
 		Dim wordIndex As Integer = message.IndexOf(searchWord)
 		ShowHeader("Use IndexOf method")
 		ShowIt($"Word Index for '{searchWord}': {wordIndex}")
@@ -89,9 +93,14 @@ Partial Class MainWindow
 	Private Sub Modify_Click(sender As Object, e As RoutedEventArgs) Handles ButtonE.Click
 		' strings are immutable
 		Dim lettersWithSpaces = "  AA  "
+		ShowHeader("Trim")
+		ShowIt(lettersWithSpaces)
 		Dim trimmed = lettersWithSpaces.Trim(" ")
-		lettersWithSpaces = "  XYZ " 'Creates a new string with the desired changes.
+		ShowIt(trimmed)
+		lettersWithSpaces = "  XYZ  " 'Creates a new string with the desired changes.
 
+
+		ShowIt(lettersWithSpaces)
 		'  trim these chars
 		Dim charsToTrim = New Char() {","c, "."c, " "c, "!"c}
 		Dim message = "A synonym for cinnamon, is a cinnamon synonym!!!"
