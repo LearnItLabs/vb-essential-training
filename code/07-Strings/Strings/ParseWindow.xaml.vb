@@ -1,48 +1,50 @@
 ﻿Option Strict Off
 Public Class ParseWindow
-	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
+	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		Dim myInteger As Integer
 		Dim myDouble As Double
 
 		' code here
 
-		ShowIt("--Integer------")
+		ShowHeader("Integer")
 		ShowIt(myInteger.ToString())
-		ShowIt("--Double------")
+		ShowHeader("Double")
 		ShowIt(myDouble.ToString())
 
 		ShowBlankLine()
 
 	End Sub
 
-	Private Sub RunCode2(sender As Object, e As RoutedEventArgs) Handles RunCode2Button.Click
+	Private Sub ButtonB_Click(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 
 		Dim myDouble As Double
 
 		' code here
-
-
 	End Sub
-
-
 
 	Sub ShowIt(message As String)
-		MessageTextBox.Text += message + vbCrLf
+		Dim bulletText As New Run("» ")
+		MessageOut.Inlines.Add(bulletText)
+		bulletText.Foreground = Brushes.SteelBlue
+		Dim normalText As New Run(message + vbCrLf)
+		MessageOut.Inlines.Add(message + vbCrLf)
 	End Sub
 	Sub ShowBlankLine()
-		MessageTextBox.Text += vbCrLf
+		Dim lineText As New Run("" + vbCrLf)
+		MessageOut.Inlines.Add(lineText)
 	End Sub
+	Sub ShowHeader(message As String)
+		Dim boldText As New Run(message + vbCrLf)
+		boldText.FontWeight = FontWeights.Bold
+		MessageOut.Inlines.Add(boldText)
 
+	End Sub
 
 	Sub ShowLine()
-		MessageTextBox.Text += "-----------" + vbCrLf
+		Dim lineText As New Run(New String("-"c, 68) + vbCrLf)
+		lineText.Foreground = Brushes.LightBlue
+		MessageOut.Inlines.Add(lineText)
 	End Sub
 
-	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
-		Clear()
-	End Sub
 
-	Private Sub Clear()
-		MessageTextBox.Text = ""
-	End Sub
 End Class

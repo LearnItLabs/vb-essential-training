@@ -43,27 +43,32 @@
 
 	End Sub
 
-
-
 	Sub ShowIt(message As String)
-		MessageTextBox.Text += message + vbCrLf
+		Dim bulletText As New Run("» ")
+		MessageOut.Inlines.Add(bulletText)
+		bulletText.Foreground = Brushes.SteelBlue
+		Dim normalText As New Run(message + vbCrLf)
+		MessageOut.Inlines.Add(message + vbCrLf)
 	End Sub
 	Sub ShowBlankLine()
-		MessageTextBox.Text += vbCrLf
+		Dim lineText As New Run("" + vbCrLf)
+		MessageOut.Inlines.Add(lineText)
 	End Sub
+	Sub ShowHeader(message As String)
+		Dim boldText As New Run(message + vbCrLf)
+		boldText.FontWeight = FontWeights.Bold
+		MessageOut.Inlines.Add(boldText)
 
-	Sub ShowFormatted(message As String, number As Object)
-		Dim formatted As IFormattable = number
-		'Dim newString = formatted.ToString("G", Nothing)
-		MessageTextBox.Text += $"{message} {formatted.ToString("N0", Nothing)}{vbCrLf}"
 	End Sub
 
 	Sub ShowLine()
-		MessageTextBox.Text += "-----------" + vbCrLf
+		Dim lineText As New Run(New String("-"c, 68) + vbCrLf)
+		lineText.Foreground = Brushes.LightBlue
+		MessageOut.Inlines.Add(lineText)
 	End Sub
 
 	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
-		MessageTextBox.Text = ""
+		MessageOut.Text = ""
 	End Sub
 
 End Class

@@ -16,14 +16,14 @@
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
-			<Button x:Name="RunCodeButton"
+			<Button x:Name="ButtonA"
 							Content="Parse to Number"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
 							MinWidth="145"
 							Margin="20"
 							Padding='6' />
-			<Button x:Name="RunCode2Button"
+			<Button x:Name="ButtonB"
 							Content="TryParse"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top"
@@ -50,14 +50,15 @@
 							 Text="1415"
 							 VerticalAlignment="Stretch" />
 		</StackPanel>
-		<TextBox x:Name="MessageTextBox"
+		<TextBlock x:Name="MessageOut"
 						 HorizontalAlignment="Stretch"
 						 Margin="40,10"
 						 TextWrapping="Wrap"
 						 Text=""
+							 Background='White'
 						 VerticalAlignment="Stretch"
-						 IsReadOnly="True"
+						
 						 DockPanel.Dock="Top"
-						 VerticalScrollBarVisibility='Visible' />
+						  />
 	</DockPanel>
 </Window>
