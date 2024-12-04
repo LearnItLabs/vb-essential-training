@@ -1,15 +1,8 @@
-﻿Public Class CompareWindow
+﻿Imports System.Reflection.Metadata
+
+Public Class CompareWindow
 	Private Sub ButtonA_Click(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
-		' Using Equals method
-		'Dim foundEquals As Boolean = False
-		'Dim fruit
-		'foundEquals =
-		'For Each fruit In fruits
-		'	If fruit.Equals(fruitToCheck, StringComparison.OrdinalIgnoreCase) Then
-		'		foundEquals = True
-		'		Exit For
-		'	End If
-		'Next
+
 	End Sub
 
 	Sub ShowIt(message As String)
@@ -45,13 +38,38 @@
 	Private Sub TextBox_TextChanged(sender As Object, e As TextChangedEventArgs)
 		Dim areEqual As Boolean = False
 		Dim compareValue As Integer = 0
+
+		Dim first As String = FirstTextBox.Text
+		Dim second As String = SecondTextBox.Text
 		Clear()
 
-		areEqual = FirstTextBox.Text.Equals(SecondTextBox.Text)
+		areEqual = first.Equals(second)
 		ShowHeader("Are Equal")
 		ShowIt(areEqual)
 
-		compareValue = FirstTextBox.Text.CompareTo(SecondTextBox.Text)
+		areEqual = first.Equals(second, StringComparison.OrdinalIgnoreCase)
+		ShowHeader("Are Equal (ignore case)")
+		ShowIt(areEqual)
+
+		compareValue = first.CompareTo(second) ' returns 1,0,-1
+
+		' comparing number values is easy to understand
+		' 6.7 => 7.9 = -1
+		' 6.7 => 6.7 = 0
+		' 6.7 => 2.3 = 1
+
+		' what about strings?
+		' camped => campus = ?
+		' Hablo => Habló
+		' SEATTLE => seattle
+
+
+		ShowHeader("CompareTo")
+		ShowIt(compareValue)
+
+		' ' returns a range of number -114, 0, 256
+		compareValue = String.Compare(first, second, StringComparison.Ordinal)
+
 		ShowHeader("Compare")
 		ShowIt(compareValue)
 	End Sub
