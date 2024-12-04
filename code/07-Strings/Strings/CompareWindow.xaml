@@ -11,7 +11,7 @@
 				FontSize="20"
 				WindowState='Maximized'
 				Loaded='Window_Loaded'>
-	<DockPanel x:Name='MainPanel'
+	<DockPanel x:Name='MainPanel' 
 						 Background="#FFECF7FF"
 						 LastChildFill="True">
 		<StackPanel Orientation='Horizontal'
@@ -64,6 +64,6 @@
 							 Text=""
 							 Background='White'
 							 DockPanel.Dock="Top"
-							 Height='241' />
+							  />
 	</DockPanel>
 </Window>
