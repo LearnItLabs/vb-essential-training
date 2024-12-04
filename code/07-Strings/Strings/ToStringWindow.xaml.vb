@@ -3,23 +3,32 @@
 		Dim myInteger As Integer = 43218765
 		Dim myLong As Long = 9988776655
 
-		ShowIt("--No format--")
+		ShowHeader("No format")
+		ShowIt(myInteger)
+		ShowIt(myLong)
 		' code here
 
 		ShowBlankLine()
-		ShowIt("--Number------")
+		ShowHeader("Number format (N)")
+		ShowIt(myInteger)
+		ShowIt(myLong)
 		' code here
 
 		ShowBlankLine()
-		ShowIt("--Exponent-------")
+		ShowHeader("Exponent format (E)")
+		ShowIt(myInteger)
+		ShowIt(myLong)
 		' code here
 
 		ShowBlankLine()
-		ShowIt("--Currency--------")
+		ShowHeader("Currency format (C)")
+		ShowIt(myInteger)
+		ShowIt(myLong)
 		' code here
 
 		ShowBlankLine()
-		ShowIt("--Hexadecimal--------")
+		ShowHeader("Hexadecimal")
+		ShowIt("")
 		' code here
 
 
