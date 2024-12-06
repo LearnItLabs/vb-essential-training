@@ -1,11 +1,14 @@
-﻿Option Strict Off
+﻿Option Strict On
+Imports System.Globalization
+
 Public Class ParseWindow
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		Dim myInteger As Integer
 		Dim myDouble As Double
 
-		' code here
-
+		'' code here
+		'myInteger = InputTextBox.Text
+		'myDouble = InputTextBox.Text
 
 		ShowHeader("Integer")
 		ShowIt(myInteger.ToString())
@@ -17,10 +20,38 @@ Public Class ParseWindow
 	End Sub
 
 	Private Sub ButtonB_Click(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
-
+		Dim myInteger As Integer
 		Dim myDouble As Double
-
+		Dim didParse As Boolean
 		' code here
+		'myInteger = Integer.Parse(InputTextBox.Text)
+
+		didParse = Integer.TryParse(InputTextBox.Text, myInteger)
+		'didParse = Integer.TryParse(InputTextBox.Text, NumberStyles.AllowThousands Or NumberStyles.Currency, Nothing, myInteger)
+
+		If didParse Then
+			ShowHeader("Integer")
+			ShowIt(myInteger.ToString())
+		Else
+			ShowHeader("Error")
+			ShowIt("Cannot parse to Integer. Try again")
+		End If
+
+		didParse = Double.TryParse(InputTextBox.Text, myDouble)
+		If didParse Then
+			ShowHeader("Double")
+			ShowIt(myDouble.ToString())
+		Else
+			ShowHeader("Error")
+			ShowIt("Cannot parse to Double. Try again")
+		End If
+
+		'ShowHeader("Double")
+		'ShowIt(myDouble.ToString())
+
+		'ShowHeader("Error")
+		'ShowIt("Cannot parse. Try again")
+		ShowBlankLine()
 	End Sub
 
 	Sub ShowIt(message As String)
