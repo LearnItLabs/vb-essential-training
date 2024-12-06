@@ -5,6 +5,8 @@ Public Class ParseWindow
 		Dim myDouble As Double
 
 		' code here
+		myInteger = InputTextBox.Text
+		myDouble = InputTextBox.Text
 
 		ShowHeader("Integer")
 		ShowIt(myInteger.ToString())
@@ -45,6 +47,11 @@ Public Class ParseWindow
 		lineText.Foreground = Brushes.LightBlue
 		MessageOut.Inlines.Add(lineText)
 	End Sub
+	Sub Clear()
+		MessageOut.Text = ""
+	End Sub
 
-
+	Private Sub ClearButton_Click(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
+		Clear()
+	End Sub
 End Class
