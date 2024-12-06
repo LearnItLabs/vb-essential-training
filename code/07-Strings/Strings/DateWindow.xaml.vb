@@ -1,7 +1,9 @@
 ﻿Public Class DateWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+		' declare and assign literal
 
+		' use DateTime class
 
 		' current date-time
 

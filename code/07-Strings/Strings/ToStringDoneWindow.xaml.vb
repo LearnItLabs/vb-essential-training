@@ -1,4 +1,4 @@
-﻿Public Class ToStringWindow
+﻿Public Class ToStringDoneWindow
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles RunCodeButton.Click
 		Dim myInteger As Integer = 43218765
 		Dim myLong As Long = 9988776655
