@@ -5,8 +5,7 @@ Public Class ParseWindow
 		Dim myDouble As Double
 
 		' code here
-		myInteger = InputTextBox.Text
-		myDouble = InputTextBox.Text
+
 
 		ShowHeader("Integer")
 		ShowIt(myInteger.ToString())
@@ -53,5 +52,9 @@ Public Class ParseWindow
 
 	Private Sub ClearButton_Click(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
 		Clear()
+	End Sub
+
+	Private Sub ButtonA_Click(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+
 	End Sub
 End Class
