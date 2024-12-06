@@ -1,4 +1,4 @@
-﻿Public Class DateWindow
+﻿Class MainWindow
 
 	Private Sub RunCode(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
 		' declare and assign literal
