@@ -27,7 +27,8 @@ Class MainWindow
 	Private Sub Init_Click(sender As Object, e As RoutedEventArgs) Handles InitButton.Click
 
 		' declare and assign literal
-		Dim literalDate As DateOnly
+		Dim literalDate As Date
+
 		Dim parsedDate As Date
 		' best to use TryParse!
 

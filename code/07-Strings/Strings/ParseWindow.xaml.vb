@@ -1,4 +1,4 @@
-﻿Option Strict On
+﻿Option Strict Off
 Imports System.Globalization
 
 Public Class ParseWindow
@@ -26,8 +26,8 @@ Public Class ParseWindow
 		' code here
 		'myInteger = Integer.Parse(InputTextBox.Text)
 
-		didParse = Integer.TryParse(InputTextBox.Text, myInteger)
-		'didParse = Integer.TryParse(InputTextBox.Text, NumberStyles.AllowThousands Or NumberStyles.Currency, Nothing, myInteger)
+		' didParse = Integer.TryParse(InputTextBox.Text, myInteger)
+		didParse = Integer.TryParse(InputTextBox.Text, NumberStyles.AllowThousands Or NumberStyles.Currency, Nothing, myInteger)
 
 		If didParse Then
 			ShowHeader("Integer")
