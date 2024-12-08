@@ -31,9 +31,10 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Right"
 								Margin='40,5'>
-			<Button x:Name="ButtonE"
+			
+			<Button x:Name="FormatButton"
 							Content="Formatting" />
-			<Button x:Name="ButtonC"
+			<Button x:Name="MethodsButton"
 							Content="Date Methods" />
 			<Button x:Name="ClearButton"
 							Content="Clear" />
@@ -42,12 +43,15 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Right"
 								Margin='40,5'>
-			<Button x:Name="ButtonA"
+			<Button x:Name="VarButton"
 							Content="Date variables" />
-			<Button x:Name="ButtonD"
-							Content="Time variables" />
-			<Button x:Name="ButtonB"
-							Content="Parsing" />
+			<Button x:Name="InitButton"
+							Content="Initialize" />
+			<Button x:Name="DateOnlyButton"
+							Content="Date Only " />
+			<Button x:Name="TimeButton"
+							Content="Time Only" />
+			
 
 		</StackPanel>
 
