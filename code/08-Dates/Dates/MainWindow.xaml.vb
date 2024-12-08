@@ -131,7 +131,7 @@ Class MainWindow
 
 		Dim myTimeSpan As TimeSpan ' the distance between dates
 		ShowIt("Original Date: " + startDate.ToLongDateString)
-		Dim newDate = startDate.Subtract(5)
+		Dim newDate = startDate.AddDays(5)
 		ShowIt("Add Days: " + newDate.ToLongDateString)
 		myTimeSpan = endDate.Subtract(startDate)
 
