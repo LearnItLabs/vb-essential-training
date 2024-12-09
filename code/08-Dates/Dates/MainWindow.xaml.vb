@@ -27,22 +27,22 @@ Class MainWindow
 	Private Sub Init_Click(sender As Object, e As RoutedEventArgs) Handles InitButton.Click
 
 		' declare and assign literal
-		Dim literalDate As Date
+		Dim literalDate As Date = #3/3/1953#
 
-		Dim parsedDate As Date
+		Dim parsedDate As Date = Date.Parse("5-25-1975")
 		' best to use TryParse!
 
 
 		' use DateTime class
-		Dim fromDateClass As Date
+		Dim fromDateClass As Date = New Date(1963, 4, 4)
 
 
 		' current date-time
-		Dim currentDate As Date
+		Dim currentDate As Date = DateTime.Now
 
 
 		' more readable with named parameters
-		Dim readableDate As Date
+		Dim readableDate As Date = New Date(year:=1963, day:=4, month:=4)
 
 		ShowIt($"literalDate: {literalDate}")
 		ShowIt($"parsedDate: {parsedDate}")
@@ -82,9 +82,9 @@ Class MainWindow
 		ShowBlankLine()
 
 		Dim newTime As TimeOnly = New TimeOnly(11, 46)
-		Dim parsedDate As TimeOnly = TimeOnly.Parse(#9:17:10 PM#)
+		Dim parseTime As TimeOnly = TimeOnly.Parse(#9:17:10 PM#)
 		ShowIt($"newTime: {newTime}")
-		ShowIt($"parsedDate: {parsedDate}")
+		ShowIt($"parsedTime: {parseTime}")
 
 		ShowBlankLine()
 

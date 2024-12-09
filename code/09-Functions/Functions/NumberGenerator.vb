@@ -1,5 +1,5 @@
-﻿Class NumberGenerator
+﻿Module NumberGenerator
 
-End Class
+End Module
 
 
