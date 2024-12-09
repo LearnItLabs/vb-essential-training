@@ -1,14 +1,11 @@
 ﻿Class MainWindow
 	Private Sub OddButton_Click(sender As Object, e As RoutedEventArgs) Handles OddButton.Click
-		Dim gen As New NumberGenerator
-		Dim odd = gen.GetRandomOddNumber()
-		ShowIt(odd)
+
+
 	End Sub
 
 	Private Sub EvenButton_Click(sender As Object, e As RoutedEventArgs) Handles EvenButton.Click
-		Dim gen As New NumberGenerator
-		Dim even = gen.GetRandomEvenNumber()
-		ShowIt(even)
+
 	End Sub
 	Private Sub ClearButton_Click(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
 		Clear()
