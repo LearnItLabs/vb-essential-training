@@ -2,13 +2,13 @@
 	Class NumberGenerator
 		' refactored
 		' refactored
-		Public Function GetRandomOddNumber() As Integer
-			Dim candidate As Integer = GetRandomNumber(201)
+		Public Function GetRandomOddNumber(maxValue As Integer) As Integer
+			Dim candidate As Integer = GetRandomNumber(maxValue)
 			Return GetOddNumber(candidate)
 
 		End Function
-		Public Function GetRandomEvenNumber() As Integer
-			Dim candidate As Integer = GetRandomNumber(201)
+		Public Function GetRandomEvenNumber(maxValue As Integer) As Integer
+			Dim candidate As Integer = GetRandomNumber(maxValue)
 
 			Return GetOddNumber(candidate) + 1
 		End Function

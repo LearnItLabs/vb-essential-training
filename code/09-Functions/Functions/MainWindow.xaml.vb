@@ -1,11 +1,18 @@
 ﻿Class MainWindow
 	Private Sub OddButton_Click(sender As Object, e As RoutedEventArgs) Handles OddButton.Click
+		Documents.PrintDocument()
+		PrintDocument()
+		Dim gen As New NumberGenerator
+
+		gen.GetRandomOddNumber()
 
 
 	End Sub
 
 	Private Sub EvenButton_Click(sender As Object, e As RoutedEventArgs) Handles EvenButton.Click
+		Dim gen As New NumberGenerator
 
+		gen.GetRandomEvenNumber()
 	End Sub
 	Private Sub ClearButton_Click(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
 		Clear()
