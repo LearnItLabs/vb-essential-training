@@ -1,0 +1,5 @@
+﻿Class NumberGenerator
+
+End Class
+
+
