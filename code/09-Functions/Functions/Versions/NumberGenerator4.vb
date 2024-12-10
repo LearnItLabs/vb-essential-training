@@ -1,7 +1,6 @@
 ﻿Namespace V4
 	Class NumberGenerator
 		' refactored
-		' refactored
 		Public Function GetRandomOddNumber(maxValue As Integer) As Integer
 			Dim candidate As Integer = GetRandomNumber(maxValue)
 			Return GetOddNumber(candidate)
