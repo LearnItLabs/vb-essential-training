@@ -1,4 +1,6 @@
-﻿Class MainWindow
+﻿Imports System.IO
+
+Class MainWindow
 
 	Private Sub RunCode1(sender As Object, e As RoutedEventArgs) Handles BreakButton.Click
 		Dim computerName As String
@@ -18,6 +20,24 @@
 		Dim fraction As Double = x / 5
 		result = $"Your answer is {fraction}"
 
+	End Sub
+
+	Private Sub RunCode3(sender As Object, e As RoutedEventArgs) Handles StepButton.Click
+		Dim odd As Integer
+		Dim gen As New NumberGenerator
+
+		odd = gen.GetRandomOddNumber(201)
+	End Sub
+
+
+
+	Private Sub RunCode4(sender As Object, e As RoutedEventArgs) Handles WatchButton.Click
+
+		Dim sentence As String = "One word after another."
+		Dim taxRate As Double = 7.8
+		Dim birthDate = Date.Parse("5/5/1992")
+		' use a directory that is on you hard drive
+		Dim sampleDir = New DirectoryInfo("c:\VBTemp")
 	End Sub
 
 #Region "Show methods"
@@ -50,10 +70,7 @@
 		MessageOut.Inlines.Add(lineText)
 	End Sub
 
-	Private Sub RunCode3(sender As Object, e As RoutedEventArgs) Handles StepButton.Click
-		Dim odd As Integer
-		odd = GetRandomOddNumber(201)
-	End Sub
+
 #End Region
 
 

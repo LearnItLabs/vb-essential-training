@@ -33,8 +33,8 @@
 								Margin='0,0,0,20'>
 			<Button x:Name="StepButton"
 							Content="Step " />
-			<Button x:Name="ButtonD"
-							Content="Another Breakpoint" />
+			<Button x:Name="WatchButton"
+							Content="Watch Windows" />
 			<Button x:Name="ClearButton"
 							Content="Clear" />
 
