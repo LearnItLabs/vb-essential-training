@@ -1,18 +1,30 @@
 ﻿Namespace V4
 	Class NumberGenerator
-		' refactored
+
+		' single reponsibility principle
+		' a function should ofocus on a single task
+		' be easy to understand, anyone reading the code can understand what it does
+
+		' TASKS
+
+		' Get a random number
+		' Make a number odd
+		' MAYBE
+		' Get an random odd number
+		' Get an random even number
+
 		Public Function GetRandomOddNumber(maxValue As Integer) As Integer
 			Dim candidate As Integer = GetRandomNumber(maxValue)
-			Return GetOddNumber(candidate)
+			Return MakeOddNumber(candidate)
 
 		End Function
 		Public Function GetRandomEvenNumber(maxValue As Integer) As Integer
 			Dim candidate As Integer = GetRandomNumber(maxValue)
 
-			Return GetOddNumber(candidate) + 1
+			Return MakeOddNumber(candidate) + 1
 		End Function
 
-		Private Function GetOddNumber(candidate As Integer) As Integer
+		Private Function MakeOddNumber(candidate As Integer) As Integer
 			If Integer.IsOddInteger(candidate) Then
 				Return candidate
 			Else
