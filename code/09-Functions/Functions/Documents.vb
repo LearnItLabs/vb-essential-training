@@ -5,7 +5,5 @@
 	Sub PrintDocument()
 
 	End Sub
-	Sub ArchiveDocument()
 
-	End Sub
 End Module

@@ -38,7 +38,7 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Right"
 								Margin='40,5'>
-			<Button x:Name="ButtonA"
+			<Button x:Name="ShowButton"
 							Content="Show results" />
 
 		</StackPanel>

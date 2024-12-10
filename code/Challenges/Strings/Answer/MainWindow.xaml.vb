@@ -1,7 +1,7 @@
 ﻿Class MainWindow
 
 
-	Private Sub ButtonA_Click(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+	Private Sub Show_Click(sender As Object, e As RoutedEventArgs) Handles ShowButton.Click
 		Dim startDate As Date
 		Dim interval As Integer
 		If Date.TryParse(StartDateTextBox.Text, startDate) = False Then
@@ -20,7 +20,7 @@
 		Dim newDate = startDate.AddDays(interval).AddMonths(interval)
 		ShowIt("Calculated End date: " + newDate.ToLongDateString)
 	End Sub
-	Private Sub ClearButton_Click(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
+	Private Sub Clear_Click(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
 		Clear()
 	End Sub
 #Region "Show methods"

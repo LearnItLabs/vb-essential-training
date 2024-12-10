@@ -1,29 +1,32 @@
-﻿Class NumberGenerator
-	' refactored
-	' refactored
-	Public Function GetRandomOddNumber() As Integer
-		Dim candidate As Integer = GetRandomNumber(201)
-		Return GetOddNumber(candidate)
+﻿Namespace V4
+	Class NumberGenerator
+		' refactored
+		' refactored
+		Public Function GetRandomOddNumber(maxValue As Integer) As Integer
+			Dim candidate As Integer = GetRandomNumber(maxValue)
+			Return GetOddNumber(candidate)
 
-	End Function
-	Public Function GetRandomEvenNumber() As Integer
-		Dim candidate As Integer = GetRandomNumber(201)
+		End Function
+		Public Function GetRandomEvenNumber(maxValue As Integer) As Integer
+			Dim candidate As Integer = GetRandomNumber(maxValue)
 
-		Return GetOddNumber(candidate) + 1
-	End Function
+			Return GetOddNumber(candidate) + 1
+		End Function
 
-	Private Function GetOddNumber(candidate As Integer) As Integer
-		If Integer.IsOddInteger(candidate) Then
+		Private Function GetOddNumber(candidate As Integer) As Integer
+			If Integer.IsOddInteger(candidate) Then
+				Return candidate
+			Else
+				Return candidate + 1
+			End If
+
+		End Function
+
+		Private Function GetRandomNumber(maxValue As Integer) As Integer
+			Dim ran = New Random
+			Dim candidate As Integer = ran.Next(maxValue:=maxValue)
 			Return candidate
-		Else
-			Return candidate + 1
-		End If
+		End Function
+	End Class
+End Namespace
 
-	End Function
-
-	Private Function GetRandomNumber(maxValue As Integer) As Integer
-		Dim ran = New Random
-		Dim candidate As Integer = ran.Next(maxValue:=maxValue)
-		Return candidate
-	End Function
-End Class
