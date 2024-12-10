@@ -2,7 +2,7 @@
 	Class NumberGenerator
 
 		' single reponsibility principle
-		' a function should ofocus on a single task
+		' a function should focus on a single task
 		' be easy to understand, anyone reading the code can understand what it does
 
 		' TASKS
