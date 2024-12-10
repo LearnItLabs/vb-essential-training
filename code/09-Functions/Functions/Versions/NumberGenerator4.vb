@@ -1,4 +1,4 @@
-﻿Class NumberGenerator4
+﻿Class NumberGenerator
 	' refactored
 	' refactored
 	Public Function GetRandomOddNumber() As Integer
