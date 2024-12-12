@@ -67,7 +67,7 @@
 									 VerticalScrollBarVisibility='Visible' />
 				</DockPanel>
 				<DockPanel Grid.Column='3'>
-					<TextBlock Text='Greater than 200'
+					<TextBlock Text='Greater than 300'
 										 DockPanel.Dock='Top' />
 					<TextBox x:Name="HighNumberOutput"
 									 HorizontalAlignment="Stretch"

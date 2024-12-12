@@ -11,7 +11,7 @@
 			PizzaAwardTextBox.Text += "No Pizza, Here's a coupon." + vbCrLf
 		End If
 #Region "Finished Code"
-		' If DayTextBox.Text = "Monday" AndAlso TimeTextBox.Text = "3:00" Then
+		' If DayTextBox.Text = "Monday" AndAlso TimeSlider.Value < 3 Then
 #End Region
 	End Sub
 	Private Sub OrDemo(sender As Object, e As RoutedEventArgs) Handles ButtonG.Click
@@ -26,7 +26,7 @@
 		End If
 
 #Region "Finished Code"
-		'If DayTextBox.Text = "Monday" OrElse TimeTextBox.Text = "3:00" Then
+		'If DayTextBox.Text = "Monday" OrElse TimeSlider.Value < 3  Then
 #End Region
 	End Sub
 End Class

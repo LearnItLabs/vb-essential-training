@@ -6,9 +6,9 @@
 		CurrentRandomOutput.Text = odd
 
 #Region "Finished Code"
-		If odd < 100 Then
-			LowNumberOutput.Text &= odd.ToString & vbCrLf
-		End If
+		'If odd < 100 Then
+		'	LowNumberOutput.Text &= odd.ToString & vbCrLf
+		'End If
 #End Region
 
 	End Sub
@@ -19,11 +19,11 @@
 		CurrentRandomOutput.Text = odd
 
 #Region "Finished Code"
-		If odd < 100 Then
-			LowNumberOutput.Text &= odd.ToString & vbCrLf
-		Else
-			OtherNumberOutput.Text &= odd.ToString & vbCrLf
-		End If
+		'If odd < 100 Then
+		'	LowNumberOutput.Text &= odd.ToString & vbCrLf
+		'Else
+		'	OtherNumberOutput.Text &= odd.ToString & vbCrLf
+		'End If
 #End Region
 	End Sub
 
@@ -35,14 +35,14 @@
 		CurrentRandomOutput.Text = odd
 
 #Region "Finished Code"
-		If odd < 100 Then
-			LowNumberOutput.Text &= odd.ToString & vbCrLf
+		'If odd < 100 Then
+		'	LowNumberOutput.Text &= odd.ToString & vbCrLf
 
-		ElseIf odd > 200 Then
-			HighNumberOutput.Text &= odd.ToString & vbCrLf
-		Else
-			OtherNumberOutput.Text &= odd.ToString & vbCrLf
-		End If
+		'ElseIf odd > 300 Then
+		'	HighNumberOutput.Text &= odd.ToString & vbCrLf
+		'Else
+		'	OtherNumberOutput.Text &= odd.ToString & vbCrLf
+		'End If
 #End Region
 
 	End Sub
