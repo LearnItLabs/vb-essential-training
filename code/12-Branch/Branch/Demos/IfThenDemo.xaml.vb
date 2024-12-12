@@ -5,6 +5,8 @@
 		odd = gen.GetRandomOddNumber(401)
 		CurrentRandomOutput.Text = odd
 
+
+
 #Region "Finished Code"
 		'If odd < 100 Then
 		'	LowNumberOutput.Text &= odd.ToString & vbCrLf
@@ -31,7 +33,7 @@
 		Dim databaseName As String = "db400"
 		Dim odd As Integer
 		Dim gen = New NumberGenerator
-		odd = gen.GetRandomOddNumber(301)
+		odd = gen.GetRandomOddNumber(401)
 		CurrentRandomOutput.Text = odd
 
 #Region "Finished Code"
