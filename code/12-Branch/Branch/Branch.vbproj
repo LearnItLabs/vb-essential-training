@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Branch</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Demos\Coupon.jpg" />
+    <None Remove="Demos\Pizza.jpg" />
+    <None Remove="Images\Coupon.jpg" />
+    <None Remove="Images\Pizza.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Demos\Coupon.jpg" />
+    <Resource Include="Demos\Pizza.jpg" />
+    <Resource Include="Images\Coupon.jpg" />
+    <Resource Include="Images\Pizza.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Controls" />
+    <Import Include="System.Windows.Data" />
+    <Import Include="System.Windows.Documents" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Windows.Media" />
+    <Import Include="System.Windows.Media.Imaging" />
+    <Import Include="System.Windows.Navigation" />
+    <Import Include="System.Windows.Shapes" />
+  </ItemGroup>
+
+</Project>
