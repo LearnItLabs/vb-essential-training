@@ -22,6 +22,11 @@
 		Dim normalText As New Run(message + vbCrLf)
 		MessageOut.Inlines.Add(message + vbCrLf)
 	End Sub
+	Public Sub ShowItSimple(message As String)
+
+		MessageOut.Text &= message
+
+	End Sub
 	Public Sub ShowBlankLine()
 		Dim lineText As New Run("" + vbCrLf)
 		MessageOut.Inlines.Add(lineText)

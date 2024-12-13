@@ -17,6 +17,34 @@
 
 	End Sub
 
+	Public Sub EndLessLoop()
+		Do
+
+		Loop While True
+		'--------------
+
+		Do
+
+		Loop Until True
+		'--------------
+
+		Do While True
+
+		Loop
+		'--------------
+
+		Do Until True
+
+		Loop
+		'--------------
+
+		While True
+			' similar to Do loop
+			' only tests at beginning of loop
+		End While
+
+	End Sub
+
 	Private Sub UserControl_Loaded(sender As Object, e As RoutedEventArgs)
 
 		parentWin = Window.GetWindow(Me)

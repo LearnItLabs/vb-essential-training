@@ -34,8 +34,9 @@
 			<TabItem Header='Do Loops'>
 				<local:DoLoopDemo />
 			</TabItem>
-
-		
+			<TabItem Header='Exit and Continue'>
+				<local:ExitDemo />
+			</TabItem>
 
 		</TabControl >
 		<DockPanel  Grid.Column='0' 
