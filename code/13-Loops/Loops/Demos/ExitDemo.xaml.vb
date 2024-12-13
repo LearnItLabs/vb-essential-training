@@ -25,11 +25,6 @@
   End Sub
 
 
-  Private Sub UserControl_Loaded(sender As Object, e As RoutedEventArgs)
-    parentWin = Window.GetWindow(Me)
-
-
-  End Sub
 
   Private Sub ContinueButton_Click(sender As Object, e As RoutedEventArgs) Handles ContinueButton.Click
     Dim result As String = ""
@@ -47,15 +42,11 @@
       parentWin.ShowItSimple(searchString(i))
     Next
 
-    'For Each ch As Char In searchString
-    '  parentWin.ShowIt(ch)
-    '  If ch = " "c Then
-    '    ' Use Continue: To skip to the next iteration if certain conditions are met.
-    '    Continue For
-    '  End If
-    '  result &= ch
-    'Next
 
+  End Sub
+
+  Private Sub UserControl_Loaded(sender As Object, e As RoutedEventArgs)
+    parentWin = Window.GetWindow(Me)
 
 
   End Sub

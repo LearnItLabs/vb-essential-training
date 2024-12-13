@@ -28,7 +28,7 @@
 		<TabControl Background='LightSteelBlue'
 								Grid.Column='1'>
 			<TabItem Header='For Loops'>
-				<local:ForLoopDemo  />
+				<local:ForLoopDemo />
 			</TabItem>
 			
 			<TabItem Header='Do Loops'>

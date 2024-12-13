@@ -7,7 +7,7 @@ Module Program
 			Dim ringCount = Console.ReadLine()
 
 			Dim totalDots = PentagonalDotCounter(numberOfRings:=ringCount)
-			'	Dim totalDots = GeneralizedDotCounter(rings:=ringCount,dimensions:=4)
+			' Dim totalDots = GeneralizedDotCounter(numberOfRings:=ringCount, dimensions:=4)
 			Console.ForegroundColor = ConsoleColor.Yellow
 			Console.WriteLine($"Ring Count: {ringCount}, Total Dots: {totalDots}")
 		Loop While True
@@ -15,7 +15,7 @@ Module Program
 	End Sub
 
 	Private Function PentagonalDotCounter(numberOfRings As Integer)
-		' 1 + 5 + 10 + 15 + 15
+		' 1 + 5 + 10 + 15 + 20
 		' 1 + (5 * 1) + (5 * 2) ... + (5 * n) 
 		Dim total = 1
 		For counter = numberOfRings - 1 To 1 Step -1
