@@ -8,7 +8,7 @@
 		Dim found1, found2, foundAll As Boolean
 		found1 = String1Textbox.Text.ToLower.Contains(searchWords)
 		found2 = String2Textbox.Text.ToLower.Contains(searchWords)
-		foundAll = found1 And found2
+		foundAll = found1 AndAlso found2
 		If found1 Then
 			results &= $"(+)  '{searchWords}' found in first string {vbCrLf}"
 		Else
