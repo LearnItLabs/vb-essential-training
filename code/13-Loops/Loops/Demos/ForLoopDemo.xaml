@@ -1,0 +1,160 @@
+﻿<UserControl x:Class="ForLoopDemo"
+						 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+						 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+						 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+						 xmlns:local="clr-namespace:Loops"
+						 mc:Ignorable="d"
+						 d:DesignHeight="450"
+						 d:DesignWidth="800"
+						 Loaded='UserControl_Loaded'
+						 FontSize='24'>
+	<Grid>
+		<TabControl>
+			<TabItem Header='For Loop'>
+				<DockPanel>
+
+					<StackPanel Orientation="Horizontal"
+											DockPanel.Dock="Top"
+											HorizontalAlignment="Center">
+						<Button x:Name="ButtonA"
+										Content="For Loop" />
+						<Button x:Name="ButtonB"
+										Content="Steps" />
+						<Button x:Name="ButtonC"
+										Content="Count Down" />
+					</StackPanel>
+					<StackPanel Orientation="Horizontal"
+											DockPanel.Dock="Top"
+											HorizontalAlignment="Center">
+						<Button x:Name="ClearButton"
+										Content="Clear" />
+					</StackPanel>
+
+					<DockPanel />
+
+				</DockPanel>
+			</TabItem>
+			<TabItem Header='For Loop Variables'>
+				<DockPanel  LastChildFill="True">
+
+					<StackPanel Orientation="Horizontal"
+											DockPanel.Dock="Top"
+											Margin='0,40,0,0'
+											HorizontalAlignment="Center">
+						<TextBlock Text='Start:'
+											 Margin='3'
+											 MinWidth='80'
+											 TextAlignment='Right' />
+						<Slider x:Name='StartSlider'
+										Minimum='20'
+										Maximum='30'
+										MinWidth='100'
+										AutoToolTipPrecision='1'
+										AutoToolTipPlacement='TopLeft'
+										VerticalAlignment='Center'
+										ToolTip='{Binding Value, ElementName=StartSlider}'
+										SmallChange='1'
+										TickFrequency='2'
+										TickPlacement='BottomRight'
+										Margin='3'
+										IsSnapToTickEnabled='True' />
+						<TextBlock Text='End:'
+											 Margin='3'
+											 MinWidth='80'
+											 TextAlignment='Right' />
+						<Slider x:Name='EndSlider'
+										Minimum='120'
+										Maximum='150'
+										MinWidth='100'
+										AutoToolTipPrecision='1'
+										AutoToolTipPlacement='TopLeft'
+										VerticalAlignment='Center'
+										ToolTip='{Binding Value, ElementName=EndSlider}'
+										SmallChange='1'
+										TickFrequency='2'
+										TickPlacement='BottomRight'
+										Margin='3'
+										IsSnapToTickEnabled='True' />
+						<TextBlock Text='Step:'
+											 MinWidth='80'
+											 TextAlignment='Right' />
+						<Slider x:Name='StepSlider'
+										Minimum='1'
+										Maximum='10'
+										MinWidth='100'
+										AutoToolTipPrecision='1'
+										AutoToolTipPlacement='TopLeft'
+										VerticalAlignment='Center'
+										ToolTip='{Binding Value, ElementName=StepSlider}'
+										SmallChange='1'
+										TickFrequency='2'
+										TickPlacement='BottomRight'
+										Margin='3'
+										IsSnapToTickEnabled='True' />
+					</StackPanel>
+					<StackPanel Orientation="Horizontal"
+											DockPanel.Dock="Top"
+											Margin='0,0,0,020'
+											HorizontalAlignment="Center">
+						<TextBlock MinWidth='80' />
+						<TextBlock Text='{Binding Value, ElementName=StartSlider}'
+											 MinWidth='100'
+											 TextAlignment='Center' />
+						<TextBlock MinWidth='80' />
+						<TextBlock Text='{Binding Value, ElementName=EndSlider}'
+											 MinWidth='100'
+											 TextAlignment='Center' />
+						<TextBlock MinWidth='80' />
+						<TextBlock Text='{Binding Value, ElementName=StepSlider}'
+											 MinWidth='100'
+											 TextAlignment='Center' />
+					</StackPanel>
+					<StackPanel Orientation="Horizontal"
+											DockPanel.Dock="Top"
+											HorizontalAlignment="Center">
+						<Button x:Name="ButtonD"
+										Content="Go" />
+						<Button x:Name="ButtonClear2"
+										Content="Clear" />
+
+					</StackPanel>
+
+				</DockPanel>
+			</TabItem>
+			<TabItem Header='Plot'>
+				<DockPanel  LastChildFill="True">
+
+					<StackPanel Orientation="Horizontal"
+											DockPanel.Dock="Bottom"
+											HorizontalAlignment="Center">
+						<Button x:Name="ButtonF"
+										Content="Show Points" />
+						<Button x:Name="ButtonG"
+										Content="Show Points With Math" />
+
+						<Button x:Name="ButtonClear3"
+										Content="Clear" />
+					</StackPanel>
+					<Canvas DockPanel.Dock='Top'
+									HorizontalAlignment='Stretch'
+									VerticalAlignment='Stretch'
+									Background='LightYellow'
+									x:Name='MainCanvas'>
+
+						<Polyline x:Name="polyline1"
+											Stroke="DarkBlue"
+											StrokeThickness="3">
+
+						</Polyline>
+						<Polyline x:Name="polyline2"
+											Stroke="DarkRed"
+											StrokeThickness="3" />
+				
+					</Canvas>
+				</DockPanel>
+
+			</TabItem>
+		</TabControl>
+	</Grid>
+</UserControl>
