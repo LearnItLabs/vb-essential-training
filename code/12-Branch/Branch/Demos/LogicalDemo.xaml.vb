@@ -29,4 +29,10 @@
 		'If DayTextBox.Text = "Monday" OrElse TimeSlider.Value < 3  Then
 #End Region
 	End Sub
+
+	Private Sub ClearButton_Click(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
+		PizzaImage.Visibility = Visibility.Hidden
+		CouponImage.Visibility = Visibility.Hidden
+		PizzaAwardTextBox.Text = ""
+	End Sub
 End Class

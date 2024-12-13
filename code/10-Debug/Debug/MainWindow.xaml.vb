@@ -27,12 +27,22 @@ Class MainWindow
 		Dim gen As New NumberGenerator
 
 		odd = gen.GetRandomOddNumber(201)
+		ShowIt(odd)
+
 	End Sub
 
 
 
 	Private Sub RunCode4(sender As Object, e As RoutedEventArgs) Handles WatchButton.Click
+		Dim odd As Integer
+		Dim gen As New NumberGenerator
 
+		odd = gen.GetRandomOddNumber(201)
+		CodeForWatchExample()
+
+	End Sub
+
+	Sub CodeForWatchExample()
 		Dim sentence As String = "One word after another."
 		Dim taxRate As Double = 7.8
 		Dim birthDate = Date.Parse("5/5/1992")
