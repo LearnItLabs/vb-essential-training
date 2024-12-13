@@ -3,6 +3,8 @@
 Public Class ForLoopDemo
 	Dim parentWin As MainWindow
 	Private Sub ForDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+		'	parentWin.ShowIt(index.ToString("D2"))
+
 
 #Region "Finished Code"
 		'parentWin.ShowHeader("For Loop")
