@@ -1,34 +1,65 @@
 ﻿<Window x:Class="MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lists"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-	<TabControl Background='LightSteelBlue'>
-		<TabItem Header='Create'>
-			<local:CreateDemo />
-		</TabItem>
-		<TabItem Header='Add'>
-			<local:AddDemo />
-		</TabItem>
+				Title="Tabbed Explorer"
+				FontSize='24'
+				Height="600"
+				Width="1000"
+				WindowStartupLocation='CenterScreen'
+				WindowState='Maximized'>
 
-		<TabItem Header='Iterate'>
-			<local:IterateDemo />
-		</TabItem>
-		<TabItem Header='Properties'>
-			<local:PropertiesDemo />
-		</TabItem>
-		<TabItem Header='Extension Methods'>
-			<local:ExtensionDemo />
-		</TabItem>
-		<TabItem Header='LINQ'>
-					<local:LinqDemo />
-				</TabItem>
-		<TabItem Header='Other'>
-			<local:OtherDemo />
-		</TabItem>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width='300' />
+			<ColumnDefinition Width='1*' />
+		</Grid.ColumnDefinitions>
 
-	</TabControl>
+		<TabControl Background='LightSteelBlue'
+								Grid.Column='1'>
+			<TabItem Header='Create'>
+				<local:CreateDemo />
+			</TabItem>
+			<TabItem Header='Add'>
+				<local:AddDemo />
+			</TabItem>
+
+			<TabItem Header='Iterate'>
+				<local:IterateDemo />
+			</TabItem>
+			<TabItem Header='Properties'>
+				<local:PropertiesDemo />
+			</TabItem>
+			<TabItem Header='Extension Methods'>
+				<local:ExtensionDemo />
+			</TabItem>
+			<TabItem Header='LINQ'>
+				<local:LinqDemo />
+			</TabItem>
+			<TabItem Header='Other'>
+				<local:OtherDemo />
+			</TabItem>
+
+		</TabControl >
+		<DockPanel  Grid.Column='0'
+								Background='LightSteelBlue'>
+			<TextBlock Text='Message'
+								 DockPanel.Dock='Top'
+								 Padding='10'
+								 Margin='0,0,0,10' />
+			<ScrollViewer Padding='5,0'>
+				<TextBlock x:Name="MessageOut"
+									 HorizontalAlignment="Stretch"
+									 Margin="10"
+									 TextWrapping="Wrap"
+									 Text=""
+									 VerticalAlignment="Stretch"
+									 Background='White' />
+			</ScrollViewer>
+		</DockPanel>
+	</Grid>
 </Window>
+
