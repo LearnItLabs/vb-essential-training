@@ -21,7 +21,7 @@
 			<Button x:Name="CreateButton"
 							Content="Create New" />
 			<Button x:Name="InitButton"
-							Content="Initialize" />
+							Content="New Methods" />
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"

@@ -7,7 +7,7 @@
 		'Dim colorNamesArray(20) As String
 		'Dim oddNumbersArray(10) As Integer
 
-		Dim colorNamesList As New List(Of String)
+		' Dim colorNamesList As New List(Of String)
 		'Dim oddNumbersList = New List(Of Integer)
 
 		'colorNamesArray(3) = "Blue"
