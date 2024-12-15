@@ -1,46 +1,62 @@
 ﻿Public Class AddDemo
 
 	' this demo uses the debugger 
-	Private Sub InitializeList(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
 
-		Dim colorNames As New List(Of String)
-		Dim colorNames2 = New List(Of String)
 
-	End Sub
-
-	Private Sub ListOfStringsDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+	Private Sub AddDemo(sender As Object, e As RoutedEventArgs) Handles AddButton.Click
 
 		Dim colorNames As New List(Of String)
 
+		' .Add ()
+		' .AddRange ()
 
-
-
-	End Sub
-	Private Sub ListOfIntegersDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
-		Dim gen As New NumberGenerator
-		Dim oddNumbers = New List(Of Integer)
-		For index = 1 To 30
-			oddNumbers.Add(gen.GetRandomOddNumberOld(201))
-
-		Next
+		' .Insert ()
+		' .InsertRange
 
 	End Sub
 
-	Private Sub List2Button_Click(sender As Object, e As RoutedEventArgs) Handles List2Button.Click
-		' have the NumberGenerator class return a List(of T)
-		Dim gen As New NumberGenerator
-		Dim oddNumbers = New List(Of Integer)
-		oddNumbers = gen.GetRandomOddNumber(305)
+	Private Sub GetButton_Click(sender As Object, e As RoutedEventArgs) Handles GetButton.Click
+		' get an item with index
+		Dim brandColors = New BrandColors()
+		Dim colorNames = brandColors.ColorNames
+
+		Dim myColor = colorNames.Item(3)
+
+		Dim firstColor = brandColors.ColorNames(0) ' no need for .Item
+		Dim lastColor = brandColors.ColorNames(brandColors.ColorCount - 1)
+
+		' Future topics
+		' -- customize methods with predicate functions
+		' -- iterate over list
+		' -- use LINQ
+
+		' .Find, FindLast, FindAll, 
+		'Dim findReddish = brandColors.ColorNames.Find ()
 
 	End Sub
+	Private Sub RemoveButton_Click(sender As Object, e As RoutedEventArgs) Handles RemoveButton.Click
+		' remove items from the list
+		Dim brandColors = New BrandColors()
+		Dim colorNames = brandColors.ColorNames
+
+		'colorNames.Remove()
+		'colorNames.RemoveAt()
+		'colorNames.RemoveRange()
+
+
+		' Future topics
+		' -- customize methods with predicate functions
+		'	colorNames.RemoveAll()
+	End Sub
+
 
 #Region "Finished Code"
 
 #End Region
-	Dim parentWin As MainWindow
-	Private Sub UserControl_Loaded(sender As Object, e As RoutedEventArgs)
 
-		parentWin = Window.GetWindow(Me)
+	Private Sub Clear()
+		OutputList.ItemsSource = Nothing
+		OutputList.Items.Clear()
 
 	End Sub
 

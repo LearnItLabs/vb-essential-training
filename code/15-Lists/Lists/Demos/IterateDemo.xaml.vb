@@ -23,7 +23,7 @@
 
 	Private Sub ListOfIntegersDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
 		Dim gen As New NumberGenerator
-		Dim oddNumbers = gen.GetRandomOddNumber(301)
+		Dim oddNumbers = gen.GetListOfRandomOddNumbers(listCount:=12, maxValue:=75)
 
 
 		For Each number In oddNumbers
@@ -49,10 +49,6 @@
 #Region "Finished Code"
 
 #End Region
-	Dim parentWin As MainWindow
-	Private Sub UserControl_Loaded(sender As Object, e As RoutedEventArgs)
 
-		parentWin = Window.GetWindow(Me)
 
-	End Sub
 End Class

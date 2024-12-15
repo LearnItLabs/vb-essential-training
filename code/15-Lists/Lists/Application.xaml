@@ -11,23 +11,26 @@
 			<Setter Property='Padding'
 							Value='6' />
 			<Setter Property='MinWidth'
-							Value='145' />
+							Value='160' />
 			<Setter Property='VerticalAlignment'
 							Value='Top' />
 			<Setter Property='HorizontalAlignment'
 							Value='Center' />
 		</Style>
-		<Style TargetType='RadioButton'>
+		<Style TargetType='RadioButton'>	
 			<Setter Property='VerticalContentAlignment'
 							Value='Center' />
 		</Style>
 		<Style TargetType='UserControl'>
 			<Setter Property='Padding'
 							Value='10' />
+			<Setter Property='FontSize'
+							Value='24' />
 		</Style>
 		<Style TargetType='TabItem'>
 			<Setter Property='MinWidth'
 							Value='90' />
 		</Style>
+		
 	</Application.Resources>
 </Application>

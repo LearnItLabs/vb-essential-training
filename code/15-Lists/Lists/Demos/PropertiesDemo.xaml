@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
 						 FontSize='24'
-						 Loaded='UserControl_Loaded'>
+						>
     <Grid>
             
     </Grid>

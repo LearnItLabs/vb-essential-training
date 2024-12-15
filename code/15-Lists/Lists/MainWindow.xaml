@@ -12,24 +12,22 @@
 				WindowStartupLocation='CenterScreen'
 				WindowState='Maximized'>
 
-	<Grid>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width='300' />
-			<ColumnDefinition Width='1*' />
-		</Grid.ColumnDefinitions>
 
 		<TabControl Background='LightSteelBlue'
 								Grid.Column='1'>
-			<TabItem Header='Create'>
+			<TabItem Header='Create and Initialize'>
 				<local:CreateDemo />
 			</TabItem>
 			<TabItem Header='Add'>
 				<local:AddDemo />
 			</TabItem>
-
-			<TabItem Header='Iterate'>
-				<local:IterateDemo />
-			</TabItem>
+		<TabItem Header='Iterate'>
+			<local:IterateDemo />
+		</TabItem>
+		<TabItem Header='Predicate'>
+			<local:PredicateDemo />
+		</TabItem>
+		
 			<TabItem Header='Properties'>
 				<local:PropertiesDemo />
 			</TabItem>
@@ -42,24 +40,12 @@
 			<TabItem Header='Other'>
 				<local:OtherDemo />
 			</TabItem>
+		<TabItem Header='UI Listbox'>
+			<local:UIDemo />
+		</TabItem>
 
-		</TabControl >
-		<DockPanel  Grid.Column='0'
-								Background='LightSteelBlue'>
-			<TextBlock Text='Message'
-								 DockPanel.Dock='Top'
-								 Padding='10'
-								 Margin='0,0,0,10' />
-			<ScrollViewer Padding='5,0'>
-				<TextBlock x:Name="MessageOut"
-									 HorizontalAlignment="Stretch"
-									 Margin="10"
-									 TextWrapping="Wrap"
-									 Text=""
-									 VerticalAlignment="Stretch"
-									 Background='White' />
-			</ScrollViewer>
-		</DockPanel>
-	</Grid>
+	</TabControl >
+	
+	
 </Window>
 

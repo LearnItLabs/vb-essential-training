@@ -6,10 +6,23 @@
 
 	End Function
 
-	Public Function GetRandomOddNumber(maxValue As Integer) As List(Of Integer)
+	Public Function GetDailySales() As Decimal()
+		' this function returns an array
+		'
+		Dim temp(5) As Decimal
+		temp(0) = 77.6D
+		temp(0) = 124.32D
+		temp(0) = 9.48D
+		temp(0) = 73.81D
+		temp(0) = 40D
+		Return temp
+
+	End Function
+
+	Public Function GetListOfRandomOddNumbers(listCount As Integer, maxValue As Integer) As List(Of Integer)
 		Dim oddNumbers = New List(Of Integer)
 		Dim candidate As Integer
-		For index = 1 To maxValue
+		For index = 1 To listCount
 			candidate = GetRandomNumber(maxValue)
 			oddNumbers.Add(GetOddNumber(candidate))
 
