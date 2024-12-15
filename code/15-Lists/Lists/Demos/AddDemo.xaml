@@ -18,6 +18,8 @@
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
+			<Button x:Name="InitButton"
+							Content="Initialize" />
 			<Button x:Name="AddButton"
 							Content="Add, Insert" />
 			<Button x:Name="GetButton"
