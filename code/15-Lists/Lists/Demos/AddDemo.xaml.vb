@@ -42,7 +42,7 @@
 
 		Dim firstColor = brandColors.ColorNames(0) ' no need for .Item
 		Dim lastColor = brandColors.ColorNames(brandColors.ColorCount - 1)
-
+		colorNames.Item(3) = "Saffron"
 		' Future topics
 		' -- customize methods with predicate functions
 		' -- iterate over list
@@ -57,9 +57,9 @@
 		Dim brandColors = New BrandColors()
 		Dim colorNames = brandColors.ColorNames
 
-		'colorNames.Remove()
-		'colorNames.RemoveAt()
-		'colorNames.RemoveRange()
+		colorNames.Remove("Olive")
+		colorNames.RemoveAt(3)
+		colorNames.RemoveRange(index:=0, 2)
 
 
 		' Future topics
