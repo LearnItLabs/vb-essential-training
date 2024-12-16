@@ -1,7 +1,8 @@
 ﻿Public Class PredicateDemo
 
 	' A predicate function is a function that returns a Boolean value,
-	' typically used for filtering collections
+	' typically used for filtering collections.
+	' A standalone function
 	Public Function IsMultipleOf5(number As Integer) As Boolean
 		Return number Mod 5 = 0
 	End Function
@@ -18,7 +19,7 @@
 		ModifiedList.ItemsSource = filtered
 	End Sub
 	Private Sub InLineButton_Click(sender As Object, e As RoutedEventArgs) Handles InLineButton.Click
-		' Now, let's rewrite the IsEven predicate function as a lambda expression.
+		' Now, let's rewrite the IsMultipleOf5 predicate function as a lambda expression.
 		' A lambda expression is an anonymous function that you can use wherever a delegate is required.
 		Dim gen As New NumberGenerator
 		Dim odds = gen.GetListOfRandomOddNumbers(listCount:=120, maxValue:=601)
@@ -36,7 +37,7 @@
 	Private Sub RemoveAButton_Click(sender As Object, e As RoutedEventArgs) Handles RemoveAButton.Click
 		Dim gen As New NumberGenerator
 		Dim odds = gen.GetListOfRandomOddNumbers(listCount:=30, maxValue:=601)
-		' Create a copy of the original list
+		' Create a filtered version of the original list
 		Dim oddCopy As New List(Of Integer)(odds)
 
 		Dim removeCount = odds.RemoveAll(Function(x) x > 50)
@@ -51,7 +52,7 @@
 
 		Dim brandColors = New BrandColors()
 		Dim colorNames = brandColors.ColorNames
-		' Create a copy of the original list
+		' Create a filtered version of the original list
 		Dim filtered = colorNames.FindAll(Function(x) x.StartsWith("S"))
 
 		OriginalList.ItemsSource = colorNames
