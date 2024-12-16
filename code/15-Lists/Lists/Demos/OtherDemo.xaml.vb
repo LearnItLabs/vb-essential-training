@@ -26,13 +26,6 @@
 	Private Sub AddFiveDemo(sender As Object, e As RoutedEventArgs) Handles QueueButton.Click
 		ClearOriginal()
 
-		' Generate a sequence of numbers from 1 to 18 using Enumerable.Range
-		'' Dim numberSequence As IEnumerable(Of Integer) = Enumerable.Range(1, 18)
-
-		' Initialize a Queue and fill it with the generated numbers
-		' _queueOfInts = New Queue(Of Integer)(numberSequence)
-		'For Each number In numberSequence
-
 		_queueOfInts.Enqueue(DateTime.Now.Millisecond)
 		'Next
 
@@ -49,26 +42,6 @@
 
 
 		OriginalList.ItemsSource = _queueOfInts
-
-	End Sub
-
-	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
-		Clear()
-	End Sub
-
-	Private Sub Clear()
-		ModifiedList.ItemsSource = Nothing
-		ModifiedList.Items.Clear()
-
-		OriginalList.ItemsSource = Nothing
-		OriginalList.Items.Clear()
-
-	End Sub
-	Private Sub ClearOriginal()
-
-
-		OriginalList.ItemsSource = Nothing
-		OriginalList.Items.Clear()
 
 	End Sub
 
@@ -92,6 +65,28 @@
 			ModifiedList.Items.Add($"{myKey} is not in the dictionary.")
 		End If
 	End Sub
+
+	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
+		Clear()
+	End Sub
+
+	Private Sub Clear()
+		ModifiedList.ItemsSource = Nothing
+		ModifiedList.Items.Clear()
+
+		OriginalList.ItemsSource = Nothing
+		OriginalList.Items.Clear()
+
+	End Sub
+	Private Sub ClearOriginal()
+
+
+		OriginalList.ItemsSource = Nothing
+		OriginalList.Items.Clear()
+
+	End Sub
+
+
 
 
 #Region "Finished Code"
