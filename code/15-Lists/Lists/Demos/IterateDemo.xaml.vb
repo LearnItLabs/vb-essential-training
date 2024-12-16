@@ -1,40 +1,44 @@
 ﻿Public Class IterateDemo
 
-	Private Sub ListOfStringsDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+	Private Sub ListOfStringsDemo(sender As Object, e As RoutedEventArgs) Handles LoopStringButton.Click
 
-		Dim colorNames As New List(Of String)
-
-		colorNames.Add("Scarlet")
-		colorNames.Add("Magenta")
-		colorNames.Insert(0, "Blue")
-		colorNames.AddRange({"Green", "Lavender"})
+		Dim brandColors = New BrandColors()
+		Dim colorNames = brandColors.ColorNames
 
 
 
 		' Use For Each to loop through a collection
 
 #Region "Finished Code"
-		For Each color In colorNames
-			OutputList.Items.Add(color)
-		Next
+		'For Each color In colorNames
+		'	OutputList.Items.Add(color)
+		'Next
 #End Region
 
 	End Sub
 
-	Private Sub ListOfIntegersDemo(sender As Object, e As RoutedEventArgs) Handles ButtonB.Click
+	Private Sub ListOfProducts(sender As Object, e As RoutedEventArgs) Handles LoopProductButton.Click
 		Dim gen As New NumberGenerator
-		Dim oddNumbers = gen.GetListOfRandomOddNumbers(listCount:=12, maxValue:=75)
+		Dim totalSales As Decimal
 
 
-		For Each number In oddNumbers
-			OutputList.Items.Add($"{number.ToString("D3")} * 4 = {(number * 4).ToString("D4")}")
+		For Each sold In gen.GetDailyProductSales
+			totalSales += sold.Price
+			OutputList.Items.Add($"Product: {sold.ProductName}, {sold.Price.ToString("C")} ")
 		Next
-
+		OutputList.Items.Add($"Total sales for : {DateTime.Now.ToString("MMMM dd")}, {totalSales.ToString("C")} ")
 	End Sub
 
-	Private Sub BindingDemo(sender As Object, e As RoutedEventArgs) Handles ButtonC.Click
+	Private Sub BindCompassDemo(sender As Object, e As RoutedEventArgs) Handles BindCompassButton.Click
 		Dim compassPoints As New List(Of String)({"North", "East", "South", "West"})
 		OutputList.ItemsSource = compassPoints
+	End Sub
+
+
+	Private Sub BindProductsDemo(sender As Object, e As RoutedEventArgs) Handles BindProductButton.Click
+		Dim gen As New NumberGenerator
+		OutputList.ItemsSource = gen.GetDailyProductSales
+		ModifiedList.ItemsSource = gen.GetDailyProductSales
 	End Sub
 	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
 		Clear()
@@ -43,6 +47,9 @@
 	Private Sub Clear()
 		OutputList.ItemsSource = Nothing
 		OutputList.Items.Clear()
+
+		ModifiedList.ItemsSource = Nothing
+		ModifiedList.Items.Clear()
 
 	End Sub
 

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Lists"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="600" d:DesignWidth="1000"
 						 FontSize='24'
 						>
 	<DockPanel>
@@ -18,13 +18,15 @@
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
-			<Button x:Name="ButtonA"
+			<Button x:Name="LoopStringButton"
 							Content="List (Of String)" />
 
-			<Button x:Name="ButtonB"
-							Content="List (Of Integer)" />
-			<Button x:Name="ButtonC"
-							Content="WPF Binding" />
+			<Button x:Name="LoopProductButton"
+							Content="List (Of Product)" />
+			<Button x:Name="BindCompassButton"
+							Content="WPF bind compass" />
+			<Button x:Name="BindProductButton"
+							Content="WPF bind products" />
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"
@@ -34,13 +36,41 @@
 		<Grid>
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width='1*' />
+				<ColumnDefinition Width='1*' />
 			</Grid.ColumnDefinitions>
 			<DockPanel>
+				<TextBlock Text='Orginal'
+									 DockPanel.Dock='Top' />
 				<ListBox x:Name='OutputList'
 								 HorizontalAlignment="Stretch"
 								 Margin="10"
 								 VerticalAlignment="Stretch"></ListBox>
-
+			</DockPanel>
+			<DockPanel  Grid.Column='1'>
+				<TextBlock Text='Style applied'
+									 DockPanel.Dock='Top' />
+				<ListBox x:Name='ModifiedList'
+								 HorizontalAlignment="Stretch"
+								 Margin="10"
+								 VerticalAlignment="Stretch">
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<Border BorderBrush="Gray"
+											BorderThickness="1"
+											CornerRadius="5"
+											Padding="5"
+											Margin="5" MinWidth='400'>
+								<StackPanel Orientation="Horizontal">
+									<TextBlock Text="{Binding ProductName}"
+														 FontWeight="Bold"
+														 Margin="0,0,10,0" />
+									<TextBlock Text="{Binding Price, StringFormat=C}"
+														 Foreground="Green" />
+								</StackPanel>
+							</Border>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
 			</DockPanel>
 		</Grid>
 	</DockPanel>

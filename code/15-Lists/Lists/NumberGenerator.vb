@@ -19,6 +19,29 @@
 
 	End Function
 
+	Public Function GetDailyProductSales() As List(Of Product)
+		Dim product As Product
+		Dim temp As New List(Of Product)
+		product = New Product(productName:="Blue Mountain Water", price:=77.6D)
+		temp.Add(product)
+		product = New Product(productName:="PowerMad Battery pack", price:=124.32D)
+		temp.Add(product)
+
+		product = New Product(productName:="Bake monster cookie pack", price:=15.95)
+		temp.Add(product)
+		product = New Product(productName:="Clown manor unicycle", price:=43.87D)
+		temp.Add(product)
+
+		product = New Product(productName:="Jumbo juggler torches", price:=87D)
+		temp.Add(product)
+
+
+
+
+		Return temp
+
+	End Function
+
 	Public Function GetListOfRandomOddNumbers(listCount As Integer, maxValue As Integer) As List(Of Integer)
 		Dim oddNumbers = New List(Of Integer)
 		Dim candidate As Integer
