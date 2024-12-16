@@ -1,12 +1,13 @@
 ﻿Public Class OtherDemo
 
 	Private _ran As Random = New Random
-	Private _sortedSet As SortedSet(Of Double) = New SortedSet(Of Double)
-	Private _queueOfInts As Queue(Of Integer) = New Queue(Of Integer)
+	Private _sortedSet As New SortedSet(Of Double)
+	Private _queueOfInts As New Queue(Of Integer)
 	Dim _productPrices As New Dictionary(Of String, Decimal)()
 
-	Private Sub SortedSetDemo(sender As Object, e As RoutedEventArgs) Handles ButtonA.Click
+	Private Sub SortedSetDemo(sender As Object, e As RoutedEventArgs) Handles SortedButton.Click
 
+		Clear()
 		_sortedSet = New SortedSet(Of Double)({3.3, 1.1, 4.4, 2.2, 5.5, 9.9, 8.8, 7.7, 6.6})
 		OriginalList.ItemsSource = _sortedSet
 
@@ -91,6 +92,7 @@
 			ModifiedList.Items.Add($"{myKey} is not in the dictionary.")
 		End If
 	End Sub
+
 
 #Region "Finished Code"
 

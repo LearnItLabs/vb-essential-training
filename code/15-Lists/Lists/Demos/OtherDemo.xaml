@@ -22,7 +22,7 @@
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
-			<Button x:Name="ButtonA"
+			<Button x:Name="SortedButton"
 							Content="SortedSet class" />
 
 			<Button x:Name="ButtonB"
