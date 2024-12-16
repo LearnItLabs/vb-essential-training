@@ -1,6 +1,9 @@
 ﻿Public Class IterateDemo
 
 	Private Sub ListOfStringsDemo(sender As Object, e As RoutedEventArgs) Handles LoopStringButton.Click
+		' For Each loop  allows us to iterate over collections
+		' and other types that implement
+		' the IEnumerable or IEnumerable(Of T) interfaces
 
 		Dim brandColors = New BrandColors()
 		Dim colorNames = brandColors.ColorNames
@@ -50,6 +53,10 @@
 
 		ModifiedList.ItemsSource = Nothing
 		ModifiedList.Items.Clear()
+
+	End Sub
+
+	Private Sub LoopStringButton_Click(sender As Object, e As RoutedEventArgs)
 
 	End Sub
 
