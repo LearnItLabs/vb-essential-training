@@ -1,13 +1,11 @@
-﻿<UserControl x:Class="LinqDemo"
+﻿<UserControl x:Class="AddTryCatch"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Lists"
+             xmlns:local="clr-namespace:Errors"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="1000"
-						 FontSize='24'
-						 >
+             d:DesignHeight="600" d:DesignWidth="1000" FontSize='24'>
 	<DockPanel>
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
@@ -18,24 +16,15 @@
 		<StackPanel Orientation="Horizontal"
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
-			<Button x:Name="WhereButton"
-							Content="Where" />
-			<Button x:Name="OrderByButton"
-							Content="OrderBy" />
-			<Button x:Name="OrderByIntButton"
-							Content="OrderBy Int" />
-			<Button x:Name="OrderByCustomButton"
-							Content="OrderBy with custom" />
-		</StackPanel>
-			<StackPanel Orientation="Horizontal"
-								DockPanel.Dock="Bottom"
-								HorizontalAlignment="Center">
-			<Button x:Name="SumButton"
-							Content="Sum and Average" />
-			<Button x:Name="MaxButton"
-							Content="Max and Last" />
-			
+			<Button x:Name="ButtonA"
+							Content="Simple Catch" />
 
+			<Button x:Name="ButtonB"
+							Content="Use Exception class" />
+			<Button x:Name="ButtonC"
+							Content="Use Multiple Catch" />
+			<Button x:Name="ButtonD"
+							Content="Add Logger" />
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"
@@ -43,21 +32,24 @@
 								Margin="5" />
 
 		<Grid>
-
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width='1*' />
+			</Grid.ColumnDefinitions>
 			<Grid>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width='1*' />
 					<ColumnDefinition Width='1*' />
 				</Grid.ColumnDefinitions>
-				<ListBox x:Name='OriginalList'
+				<TextBox x:Name='FileATextBox'
 								 HorizontalAlignment="Stretch"
 								 Margin="10"
-								 VerticalAlignment="Stretch"></ListBox>
-				<ListBox x:Name='ModifiedList'
+								 VerticalAlignment="Stretch"></TextBox>
+				<TextBox x:Name='FileBTextBox'
 								 HorizontalAlignment="Stretch"
 								 Margin="10"
 								 VerticalAlignment="Stretch"
-								 Grid.Column='1'></ListBox>
+								 Grid.Column='1'
+								 IsReadOnly='True'></TextBox>
 
 			</Grid>
 		</Grid>
