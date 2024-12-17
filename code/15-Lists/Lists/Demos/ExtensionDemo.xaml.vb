@@ -10,13 +10,6 @@
 		OriginalList.Items.Add(fixedCourseTitle)
 	End Sub
 
-
-
-
-#Region "Finished Code"
-
-#End Region
-
 	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
 		Clear()
 	End Sub
