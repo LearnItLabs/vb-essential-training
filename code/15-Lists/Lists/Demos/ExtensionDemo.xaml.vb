@@ -10,19 +10,6 @@
 		OriginalList.Items.Add(fixedCourseTitle)
 	End Sub
 
-	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
-		Clear()
-	End Sub
-
-	Private Sub Clear()
-		ModifiedList.ItemsSource = Nothing
-		ModifiedList.Items.Clear()
-
-		OriginalList.ItemsSource = Nothing
-		OriginalList.Items.Clear()
-
-	End Sub
-
 	Private Sub EnumerableButton_Click(sender As Object, e As RoutedEventArgs) Handles EnumerableButton.Click
 		' LINQ offers powerful tools for querying data collections.
 		' The Enumerable class serves as a core class for performing LINQ query operations.
@@ -33,7 +20,8 @@
 		Dim empty = Enumerable.Empty(Of Decimal)
 
 		Dim numbers = Enumerable.Range(start:=20, count:=300).ToList()
-		Dim repeated As List(Of String) = Enumerable.Repeat("Hello", 12)
+		Dim repeated As List(Of String) = Enumerable.Repeat("Hello, ", 12).ToList
+
 
 
 	End Sub
@@ -71,6 +59,17 @@
 		' Sort (List) and OrderBy/OrderByDescending (Enumerable)
 
 	End Sub
+	Private Sub Clear(sender As Object, e As RoutedEventArgs) Handles ClearButton.Click
+		Clear()
+	End Sub
 
+	Private Sub Clear()
+		ModifiedList.ItemsSource = Nothing
+		ModifiedList.Items.Clear()
+
+		OriginalList.ItemsSource = Nothing
+		OriginalList.Items.Clear()
+
+	End Sub
 
 End Class
