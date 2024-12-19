@@ -1,7 +1,7 @@
 ﻿' Base class Card
 Imports System.Runtime.Serialization
 Namespace BigStarCards
-  ' classes defined for a fantasy trading card game
+  ' Classes defined for a fantasy trading card game
   Public Class Card
 
 #Region "Constructors"
