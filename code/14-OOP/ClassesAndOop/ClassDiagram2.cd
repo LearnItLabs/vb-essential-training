@@ -1,43 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ClassesAndOop.BigStarCards.Card" Collapsed="true">
-    <Position X="10.25" Y="1.5" Width="1.5" />
+    <Position X="3.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAIAAACAAgAAAAAAAAAAQAAAAAABAQAgAAAAAAAAA=</HashCode>
       <FileName>Card.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClassesAndOop.BigStarCards.Creature">
-    <Position X="12.5" Y="2.75" Width="1.5" />
+  <Class Name="ClassesAndOop.BigStarCards.Creature" Collapsed="true">
+    <Position X="2.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAAAgAAAQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Card.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClassesAndOop.BigStarCards.Monster" Collapsed="true">
-    <Position X="12.5" Y="5" Width="1.5" />
+    <Position X="2.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Card.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClassesAndOop.BigStarCards.Robot" Collapsed="true">
-    <Position X="9" Y="2.75" Width="1.5" />
+    <Position X="4.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAgAAAAAAAAQAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
       <FileName>Card.vb</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="ClassesAndOop.BigStarCards.Cyborg" Collapsed="true">
-    <Position X="8" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Card.vb</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ClassesAndOop.BigStarCards.Nanobot">
-    <Position X="10.25" Y="5.25" Width="1.5" />
+  <Class Name="ClassesAndOop.BigStarCards.Nanobot" Collapsed="true">
+    <Position X="4.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Card.vb</FileName>

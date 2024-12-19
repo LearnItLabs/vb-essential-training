@@ -19,8 +19,4 @@
     <Import Include="System.Windows.Shapes" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Demos\" />
-  </ItemGroup>
-
 </Project>

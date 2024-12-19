@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="CardDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClassesAndOop"
+             mc:Ignorable="d"
+						 d:DesignHeight="600"
+						 d:DesignWidth="1000"
+						 FontSize='24'
+						 Padding='10'>
+
+	<DockPanel x:Name='MainPanel'
+						 Background="#FFECF7FF"
+						 LastChildFill="True">
+		<StackPanel Orientation="Horizontal"
+								DockPanel.Dock="Bottom"
+								HorizontalAlignment="Center"
+								Margin='0,0,0,20'>
+		
+		
+			<Button x:Name="ClearButton"
+							Content="Clear" />
+
+		</StackPanel>
+		<StackPanel Orientation="Horizontal"
+								DockPanel.Dock="Bottom"
+								HorizontalAlignment="Center"
+								Margin='0,0,0,20'>
+
+			<Button x:Name="InheritButton"
+							Content="Base Class Inheritance " />
+			<Button x:Name="InterfaceButton"
+							Content="Interface Inheritance" />
+		</StackPanel>
+		<StackPanel Orientation="Horizontal"
+								DockPanel.Dock="Bottom"
+								HorizontalAlignment="Center"
+								Margin='0,0,0,20'>
+			<Button x:Name="SetButton"
+							Content="Set Properties" />
+			<Button x:Name="ConstructorButton"
+							Content="Constructors" />
+		
+		</StackPanel>
+
+		<TextBlock x:Name="MessageOut"
+							 HorizontalAlignment="Stretch"
+							 Margin="40"
+							 TextWrapping="Wrap"
+							 Text=""
+							 VerticalAlignment="Stretch"
+							 Background='White'
+							 DockPanel.Dock="Top" />
+	</DockPanel>
+</UserControl>
