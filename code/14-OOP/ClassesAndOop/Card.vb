@@ -17,6 +17,12 @@ Namespace BigStarCards
       ' any setup required for the object to function properly.
 
     End Sub
+    Public Sub New(name As String, description As String)
+      ' an additional constructor that takes two parameters
+      Me.Name = name
+      Me.Description = description
+
+    End Sub
     Public Sub New(name As String, description As String,
                    originalListPrice As Decimal, askingPrice As Decimal)
       ' an additional constructor that takes four parameters
@@ -26,12 +32,7 @@ Namespace BigStarCards
       Me.AskingPrice = askingPrice
     End Sub
 
-    Public Sub New(name As String, description As String)
-      ' an additional constructor that takes two parameters
-      Me.Name = name
-      Me.Description = description
 
-    End Sub
 #End Region
     Public Function GetName()
       Return _name
