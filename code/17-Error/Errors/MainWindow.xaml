@@ -18,14 +18,10 @@
 			<local:What />
 		</TabItem>
 		<TabItem Header='Add Try Catch'>
-		
+			<local:AddTryCatch />
 		</TabItem>
-		<TabItem Header='Iterate'>
-		
-		</TabItem>
-		<TabItem Header='Predicate'>
-		
-		</TabItem>
+
+	
 
 
 
