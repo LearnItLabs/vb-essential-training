@@ -39,7 +39,7 @@ Public Class CardDemo
 
 		Dim card2 = New Card("Emberling", emberDesc)
 
-		Dim card3 = Nothing
+		Dim card3 = New Card()
 
 	End Sub
 

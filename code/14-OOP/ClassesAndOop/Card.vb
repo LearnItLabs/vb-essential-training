@@ -30,8 +30,7 @@ Namespace BigStarCards
       ' an additional constructor that takes two parameters
       Me.Name = name
       Me.Description = description
-      Me.OriginalListPrice = OriginalListPrice
-      Me.AskingPrice = AskingPrice
+
     End Sub
 #End Region
     Public Function GetName()
