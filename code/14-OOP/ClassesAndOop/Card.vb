@@ -34,6 +34,13 @@ Namespace BigStarCards
       Me.AskingPrice = AskingPrice
     End Sub
 #End Region
+    Public Function GetName()
+      Return _name
+    End Function
+    Public Sub SetName(value As String)
+      _name = value
+    End Sub
+
     Private _name As String
     Public Property Name() As String
       Get

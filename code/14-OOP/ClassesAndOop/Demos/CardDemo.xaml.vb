@@ -21,6 +21,10 @@ Public Class CardDemo
 	End Sub
 
 	Private Shared Function SetCardProperties(card As BigStarCards.Card) As BigStarCards.Card
+		' use accessor methods
+		card.SetName("Branshie")
+		Dim name = card.GetName()
+
 		' set property
 		card.Name = "Traxtor"
 		card.Description = "Traxtor: A relentless warrior who crushes foes with unyielding strength and ferocity."
@@ -30,10 +34,13 @@ Public Class CardDemo
 	End Function
 
 	Private Sub ConstructorButton_Click(sender As Object, e As RoutedEventArgs) Handles ConstructorButton.Click
-		Dim card1 = New BigStarCards.Card ' use parameterless constructor
+		Dim card1 = New Card() ' use parameterless constructor
 		Dim emberDesc As String = "A fiery spirit that ignites the battlefield with bursts of flame."
 
-		Dim card2 = New BigStarCards.Card("Emberling", emberDesc)
+		Dim card2 = New Card("Emberling", emberDesc)
+
+		Dim card3 = Nothing
+
 	End Sub
 
 	Private Sub InheritButton_Click(sender As Object, e As RoutedEventArgs) Handles InheritButton.Click

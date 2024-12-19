@@ -12,19 +12,13 @@
 				WindowStartupLocation='CenterScreen'
 				WindowState='Maximized'>
 	<TabControl Background='LightSteelBlue'>
-		<TabItem Header='Properties'>
+		<TabItem Header='OOP'>
 			<local:CardDemo />
 		</TabItem>
-		<TabItem Header='Constructor'>
-			
-		</TabItem>
+		
 
-		<TabItem Header='Base Class Inheritance'>
-			
-		</TabItem>
-		<TabItem Header='Interface Inheritance'>
-
-		</TabItem>
+	
+		
 
 	</TabControl>
 </Window>
