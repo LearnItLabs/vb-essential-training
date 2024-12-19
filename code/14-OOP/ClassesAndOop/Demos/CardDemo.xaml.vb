@@ -44,9 +44,9 @@ Public Class CardDemo
 	End Sub
 
 	Private Sub InheritButton_Click(sender As Object, e As RoutedEventArgs) Handles InheritButton.Click
-		Dim card As New BigStarCards.Card
-		Dim bot As New BigStarCards.Nanobot
-		Dim monster = New BigStarCards.Monster
+		Dim card As New Card
+		Dim bot As New Nanobot
+		Dim monster = New Monster
 
 		' work with base class properties
 
@@ -64,8 +64,13 @@ Public Class CardDemo
 
 		Dim bot1 As New Nanobot
 		Dim bot2 As New Nanobot
-		Dim monster1 = New BigStarCards.Monster
-		Dim monster2 = New BigStarCards.Monster
+		Dim bot3 As New Nanobot
+		Dim monster1 = New Monster
+		Dim monster2 = New Monster
+
+		bot1.BatteryLevel = 0.9
+		bot2.BatteryLevel = 0.5
+		bot3.BatteryLevel = 0.2
 
 		Dim sortedMonsters As New SortedSet(Of Monster)
 
@@ -74,13 +79,20 @@ Public Class CardDemo
 		'sortedMonsters.Add(monster1)
 		'sortedMonsters.Add(monster2)
 
-		Dim sortedBots As New SortedSet(Of BigStarCards.Robot)
+		Dim sortedBots As New SortedSet(Of Robot)
 
 		sortedBots.Add(bot1)
 		sortedBots.Add(bot2)
+		sortedBots.Add(bot3)
 
 
-		'If bot1 > bot2 Then
+		If bot1 > bot2 Then
+
+			ShowIt(bot1 > bot2)
+		End If
+
+
+		'If monster1 > monster2 Then
 
 		'End If
 
